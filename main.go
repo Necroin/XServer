@@ -18,7 +18,7 @@ var (
 		"start":  start,
 	}
 	configPath             = "./config.yml"
-	handlersPath           = "bin/handlers/"
+	handlersFilesPath      = "bin/handlers/"
 	languagesBuildCommands = map[string]func(string, string) error{
 		".go": builders.Go,
 	}
@@ -35,17 +35,15 @@ func create(config *config.Config) error {
 func build(config *config.Config) error {
 	fmt.Println("[XServer] [Build] Build project")
 
-	if err := os.MkdirAll(handlersPath, os.ModePerm); err != nil {
+	if err := os.MkdirAll(handlersFilesPath, os.ModePerm); err != nil {
 		return fmt.Errorf("[XServer] [Build] [Error] failed create files directory: %s", err)
 	}
 
 	for handlerName, handler := range config.Handlers {
 		fmt.Println(fmt.Sprintf(`[XServer] [Build] build "%s" handler`, handlerName))
-		//file := path.Base(handler.Path)
-		fileExtention := path.Ext(handler.Path)
-		buildCommand, ok := languagesBuildCommands[fileExtention]
+		buildCommand, ok := languagesBuildCommands[path.Ext(handler.File)]
 		if ok {
-			if err := buildCommand(handler.Path, path.Join(handlersPath, handlerName, "executable")); err != nil {
+			if err := buildCommand(handler.File, path.Join(handlersFilesPath, handlerName, "executable")); err != nil {
 				return fmt.Errorf(`[XServer] [Build] [Error] failed compile "%s" handler: %s`, handlerName, err)
 			}
 		}
@@ -61,21 +59,21 @@ func start(config *config.Config) error {
 
 	for handlerName, handler := range config.Handlers {
 		xserver.AddHandler(
-			"/"+handlerName,
+			handler.Path,
 			func(writer http.ResponseWriter, request *http.Request) {
-				runCommand, ok := languagesRunCommands[path.Ext(handler.Path)]
+				runCommand, ok := languagesRunCommands[path.Ext(handler.File)]
 				if !ok {
 					writer.Write([]byte(fmt.Sprintf("[XServer] [%s Handler] [Error] run command is unknown", handlerName)))
 				}
 
-				_, builded := languagesBuildCommands[path.Ext(handler.Path)]
-				handlerPath := handler.Path
+				_, builded := languagesBuildCommands[path.Ext(handler.File)]
+				handlerExecutablePath := handler.File
 				if builded {
-					handlerPath = path.Join(handlersPath, handlerName, "executable")
+					handlerExecutablePath = path.Join(handlersFilesPath, handlerName, "executable")
 				}
 
 				runCommand(
-					handlerPath,
+					handlerExecutablePath,
 					writer,
 					request,
 					func(err error) {

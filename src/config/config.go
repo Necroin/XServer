@@ -9,6 +9,7 @@ import (
 
 type Handler struct {
 	Path string
+	File string
 }
 
 type Config struct {
