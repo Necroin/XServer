@@ -7,6 +7,9 @@ handlers:
     path: /go_handler
     file: handlers/go/handler.go
 
-  another_go_handler:
-    path: /another_go_handler
-    file: handlers/go/handler.go
+
+  cpp_handler:
+    path: /cpp_handler
+    file: handlers/cpp/handler.cpp
+    build:
+      tool: gcc

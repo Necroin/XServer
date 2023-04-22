@@ -35,8 +35,13 @@ func create(config *config.Config) error {
 
 func build(config *config.Config) error {
 	logger.Info("[XServer] [Build] Build project")
+
+	if err := os.RemoveAll(handlersFilesPath); err != nil {
+		return fmt.Errorf("[XServer] [Build] [Error] failed delete handlers file directory: %s", err)
+	}
+
 	if err := os.MkdirAll(handlersFilesPath, os.ModePerm); err != nil {
-		return fmt.Errorf("[XServer] [Build] [Error] failed create files directory: %s", err)
+		return fmt.Errorf("[XServer] [Build] [Error] failed create handlers file directory: %s", err)
 	}
 
 	for handlerName, handler := range config.Handlers {
