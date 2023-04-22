@@ -12,14 +12,14 @@ var (
 	Executable = run_executable
 )
 
-func run_executable(path string, writer http.ResponseWriter, request *http.Request, errorCallback func(err error)) {
+func run_executable(path string, writer http.ResponseWriter, request *http.Request, errorCallback func(string, error), logCallback func(string)) {
 	myPipeReader, handlerPipeWriter := io.Pipe()
 	defer myPipeReader.Close()
 	defer handlerPipeWriter.Close()
 
 	requestBody, err := ioutil.ReadAll(request.Body)
 	if err != nil {
-		errorCallback(err)
+		errorCallback("failed read request body", err)
 		return
 	}
 
@@ -30,13 +30,13 @@ func run_executable(path string, writer http.ResponseWriter, request *http.Reque
 
 	go func() {
 		defer handlerPipeWriter.Close()
-
+		logCallback("run handler file")
 		if err := cmd.Run(); err != nil {
-			errorCallback(err)
+			errorCallback("failed run handler file", err)
 		}
 	}()
 
 	if _, err := io.Copy(writer, myPipeReader); err != nil {
-		errorCallback(err)
+		errorCallback("failed copy handler response", err)
 	}
 }

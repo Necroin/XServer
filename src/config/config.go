@@ -14,6 +14,7 @@ type Handler struct {
 
 type Config struct {
 	Url      string `yaml:"url"`
+	LogsPath string `yaml:"logs"`
 	Handlers map[string]Handler
 }
 

@@ -7,6 +7,7 @@ import (
 	"path"
 	"xserver/src/builders"
 	"xserver/src/config"
+	"xserver/src/logger"
 	"xserver/src/runners"
 	"xserver/src/server"
 )
@@ -22,25 +23,24 @@ var (
 	languagesBuildCommands = map[string]func(string, string) error{
 		".go": builders.Go,
 	}
-	languagesRunCommands = map[string]func(string, http.ResponseWriter, *http.Request, func(err error)){
+	languagesRunCommands = map[string]func(string, http.ResponseWriter, *http.Request, func(string, error), func(string)){
 		".go": runners.Executable,
 	}
 )
 
 func create(config *config.Config) error {
-	fmt.Println("XServer: create project.")
+	logger.Info("XServer: create project.")
 	return nil
 }
 
 func build(config *config.Config) error {
-	fmt.Println("[XServer] [Build] Build project")
-
+	logger.Info("[XServer] [Build] Build project")
 	if err := os.MkdirAll(handlersFilesPath, os.ModePerm); err != nil {
 		return fmt.Errorf("[XServer] [Build] [Error] failed create files directory: %s", err)
 	}
 
 	for handlerName, handler := range config.Handlers {
-		fmt.Println(fmt.Sprintf(`[XServer] [Build] build "%s" handler`, handlerName))
+		logger.Info(fmt.Sprintf(`[XServer] [Build] build "%s" handler`, handlerName))
 		buildCommand, ok := languagesBuildCommands[path.Ext(handler.File)]
 		if ok {
 			if err := buildCommand(handler.File, path.Join(handlersFilesPath, handlerName, "executable")); err != nil {
@@ -52,7 +52,7 @@ func build(config *config.Config) error {
 }
 
 func start(config *config.Config) error {
-	fmt.Println("[XServer] Start project")
+	logger.Info("[XServer] Start project")
 	xserver := server.Create(
 		&server.ServerOptions{Url: config.Url},
 	)
@@ -61,9 +61,13 @@ func start(config *config.Config) error {
 		xserver.AddHandler(
 			handler.Path,
 			func(writer http.ResponseWriter, request *http.Request) {
+				logger.Info(fmt.Sprintf("[XServer] [%s Handler] handler called", handlerName))
 				runCommand, ok := languagesRunCommands[path.Ext(handler.File)]
 				if !ok {
-					writer.Write([]byte(fmt.Sprintf("[XServer] [%s Handler] [Error] run command is unknown", handlerName)))
+					message := fmt.Sprintf("[XServer] [%s Handler] [Error] run command is unknown", handlerName)
+					logger.Error(message)
+					writer.Write([]byte(message))
+					return
 				}
 
 				_, builded := languagesBuildCommands[path.Ext(handler.File)]
@@ -76,8 +80,13 @@ func start(config *config.Config) error {
 					handlerExecutablePath,
 					writer,
 					request,
-					func(err error) {
-						writer.Write([]byte(fmt.Sprintf("[XServer] [%s Handler] [Error] failed run command: %s", handlerName, err)))
+					func(message string, err error) {
+						message = fmt.Sprintf("[XServer] [%s Handler] [Error] %s: %s", handlerName, message, err)
+						logger.Error(message)
+						writer.Write([]byte(message + "\n"))
+					},
+					func(message string) {
+						logger.Info(fmt.Sprintf("[XServer] [%s Handler] %s", handlerName, message))
 					},
 				)
 			},
@@ -93,7 +102,10 @@ func start(config *config.Config) error {
 }
 
 func usage() {
-	fmt.Println("usage: xserver <command> [command args ...]")
+	fmt.Println("usage: xserver <command>")
+	fmt.Println("\tcommands:")
+	fmt.Println("\t\tbuild: compiles all handlers")
+	fmt.Println("\t\tstart: start server")
 }
 
 func main() {
@@ -113,8 +125,14 @@ func main() {
 		fmt.Println(err)
 		return
 	}
-	if err := command(config); err != nil {
+
+	if err := logger.Configure(config); err != nil {
 		fmt.Println(err)
+		return
+	}
+
+	if err := command(config); err != nil {
+		logger.Error(err.Error())
 		return
 	}
 

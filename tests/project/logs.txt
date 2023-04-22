@@ -1,0 +1,3 @@
+2023/04/22 22:00:14 INFO [XServer] Start project
+2023/04/22 22:00:19 INFO [XServer] [another_go_handler Handler] handler called
+2023/04/22 22:00:19 INFO [XServer] [another_go_handler Handler] run handler file
