@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	"path"
+	"sync"
 	"xserver/src/config"
 )
 
@@ -17,6 +18,7 @@ const (
 
 var (
 	logLevel = infoLevel
+	mutex    sync.Mutex
 )
 
 func Configure(config *config.Config) error {
@@ -26,9 +28,13 @@ func Configure(config *config.Config) error {
 			return fmt.Errorf("[XServer] [Logger] [Error] failed create logs directory: %s", err)
 		}
 
-		logsFile, err := os.Create(config.LogsPath)
+		var logsFile *os.File
+		logsFile, err := os.OpenFile(config.LogsPath, os.O_RDWR|os.O_CREATE|os.O_APPEND, os.ModePerm)
 		if err != nil {
-			return fmt.Errorf("[XServer] [Logger] [Error] failed create logs file: %s", err)
+			logsFile, err = os.Create(config.LogsPath)
+			if err != nil {
+				return fmt.Errorf("[XServer] [Logger] [Error] failed create logs file: %s", err)
+			}
 		}
 		log.SetOutput(logsFile)
 	}
@@ -37,24 +43,40 @@ func Configure(config *config.Config) error {
 
 func Info(message string) {
 	if logLevel >= infoLevel {
-		go func() { log.Println("INFO: " + message) }()
+		go func() {
+			mutex.Lock()
+			defer mutex.Unlock()
+			log.Println("INFO: " + message)
+		}()
 	}
 }
 
 func Error(message string) {
 	if logLevel >= errorLevel {
-		go func() { log.Println("ERROR: " + message) }()
+		go func() {
+			mutex.Lock()
+			defer mutex.Unlock()
+			log.Println("ERROR: " + message)
+		}()
 	}
 }
 
 func Debug(message string) {
 	if logLevel >= debufLevel {
-		go func() { log.Println("DEBUG: " + message) }()
+		go func() {
+			mutex.Lock()
+			defer mutex.Unlock()
+			log.Println("DEBUG: " + message)
+		}()
 	}
 }
 
 func Verbose(message string) {
 	if logLevel >= verboseLevel {
-		go func() { log.Println("VERBOSE: " + message) }()
+		go func() {
+			mutex.Lock()
+			defer mutex.Unlock()
+			log.Println("VERBOSE: " + message)
+		}()
 	}
 }

@@ -1,1 +1,6 @@
-2023/04/22 22:22:22 INFO: [XServer] Start project
+2023/04/22 23:13:13 INFO: [XServer] [Build] Build project
+2023/04/22 23:13:13 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/22 23:13:13 INFO: [XServer] [Build] build "go_handler" handler
+2023/04/22 23:13:13 INFO: [XServer] Start project
+2023/04/22 23:13:24 INFO: [XServer] [go_handler Handler] handler called
+2023/04/22 23:13:24 INFO: [XServer] [go_handler Handler] run handler file

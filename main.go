@@ -63,22 +63,24 @@ func start(config *config.Config) error {
 	)
 
 	for handlerName, handler := range config.Handlers {
+		currentHandlerName := handlerName
+		currentHandler := handler
 		xserver.AddHandler(
-			handler.Path,
+			currentHandler.Path,
 			func(writer http.ResponseWriter, request *http.Request) {
-				logger.Info(fmt.Sprintf("[XServer] [%s Handler] handler called", handlerName))
-				runCommand, ok := languagesRunCommands[path.Ext(handler.File)]
+				logger.Info(fmt.Sprintf("[XServer] [%s Handler] handler called", currentHandlerName))
+				runCommand, ok := languagesRunCommands[path.Ext(currentHandler.File)]
 				if !ok {
-					message := fmt.Sprintf("[XServer] [%s Handler] [Error] run command is unknown", handlerName)
+					message := fmt.Sprintf("[XServer] [%s Handler] [Error] run command is unknown", currentHandlerName)
 					logger.Error(message)
 					writer.Write([]byte(message))
 					return
 				}
 
-				_, builded := languagesBuildCommands[path.Ext(handler.File)]
-				handlerExecutablePath := handler.File
+				_, builded := languagesBuildCommands[path.Ext(currentHandler.File)]
+				handlerExecutablePath := currentHandler.File
 				if builded {
-					handlerExecutablePath = path.Join(handlersFilesPath, handlerName, "executable")
+					handlerExecutablePath = path.Join(handlersFilesPath, currentHandlerName, "executable")
 				}
 
 				runCommand(
@@ -86,12 +88,12 @@ func start(config *config.Config) error {
 					writer,
 					request,
 					func(message string, err error) {
-						message = fmt.Sprintf("[XServer] [%s Handler] [Error] %s: %s", handlerName, message, err)
+						message = fmt.Sprintf("[XServer] [%s Handler] [Error] %s: %s", currentHandlerName, message, err)
 						logger.Error(message)
 						writer.Write([]byte(message + "\n"))
 					},
 					func(message string) {
-						logger.Info(fmt.Sprintf("[XServer] [%s Handler] %s", handlerName, message))
+						logger.Info(fmt.Sprintf("[XServer] [%s Handler] %s", currentHandlerName, message))
 					},
 				)
 			},

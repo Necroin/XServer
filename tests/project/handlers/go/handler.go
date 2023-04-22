@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Println("[Go Hanler] Started")
+	fmt.Println("[Go Handler] Started")
 	reader := bufio.NewReader(os.Stdin)
 	text, _ := reader.ReadString('\n')
 	fmt.Println(text)
