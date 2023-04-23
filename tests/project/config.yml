@@ -11,4 +11,6 @@ handlers:
     path: /cpp_handler
     file: handlers/cpp/handler.cpp
     build:
-      tool: gcc
+      tool: g++
+      flags:
+        - -static

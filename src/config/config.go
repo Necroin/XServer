@@ -7,9 +7,15 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
+type Build struct {
+	Tool  string   `yaml:"tool"`
+	Flags []string `yaml:"flags"`
+}
+
 type Handler struct {
-	Path string
-	File string
+	Path  string
+	File  string
+	Build *Build `yaml:"build"`
 }
 
 type Config struct {

@@ -10,3 +10,4 @@ def test_cpp_handler():
     
 if __name__ == "__main__":
     test_go_handler()
+    test_cpp_handler()

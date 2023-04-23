@@ -46,10 +46,21 @@ func build(config *config.Config) error {
 
 	for handlerName, handler := range config.Handlers {
 		logger.Info(fmt.Sprintf(`[XServer] [Build] build "%s" handler`, handlerName))
+		if err := os.MkdirAll(path.Join(handlersFilesPath, handlerName), os.ModePerm); err != nil {
+			return fmt.Errorf("[XServer] [Build] [Error] failed create handler file directory: %s", err)
+		}
+
+		if handler.Build != nil {
+			if err := builders.Custom(handler.Build.Tool, handler.File, path.Join(handlersFilesPath, handlerName, "executable"), handler.Build.Flags...); err != nil {
+				logger.Error(fmt.Sprintf(`[XServer] [Build] [Error] failed compile "%s" handler: %s`, handlerName, err))
+			}
+			return nil
+		}
+
 		buildCommand, ok := languagesBuildCommands[path.Ext(handler.File)]
 		if ok {
 			if err := buildCommand(handler.File, path.Join(handlersFilesPath, handlerName, "executable")); err != nil {
-				return fmt.Errorf(`[XServer] [Build] [Error] failed compile "%s" handler: %s`, handlerName, err)
+				logger.Error(fmt.Sprintf(`[XServer] [Build] [Error] failed compile "%s" handler: %s`, handlerName, err))
 			}
 		}
 	}
@@ -65,23 +76,29 @@ func start(config *config.Config) error {
 	for handlerName, handler := range config.Handlers {
 		currentHandlerName := handlerName
 		currentHandler := handler
+
+		_, builded := languagesBuildCommands[path.Ext(currentHandler.File)]
+		builded = builded || handler.Build != nil
+		handlerExecutablePath := currentHandler.File
+		if builded {
+			handlerExecutablePath = path.Join(handlersFilesPath, currentHandlerName, "executable")
+		}
+
+		runCommand, ok := languagesRunCommands[path.Ext(currentHandler.File)]
+
+		if !ok {
+			if builded {
+				runCommand = runners.Executable
+			} else {
+				message := fmt.Sprintf("[XServer] [%s Handler] [Error] run command is unknown", currentHandlerName)
+				logger.Error(message)
+			}
+		}
+
 		xserver.AddHandler(
 			currentHandler.Path,
 			func(writer http.ResponseWriter, request *http.Request) {
 				logger.Info(fmt.Sprintf("[XServer] [%s Handler] handler called", currentHandlerName))
-				runCommand, ok := languagesRunCommands[path.Ext(currentHandler.File)]
-				if !ok {
-					message := fmt.Sprintf("[XServer] [%s Handler] [Error] run command is unknown", currentHandlerName)
-					logger.Error(message)
-					writer.Write([]byte(message))
-					return
-				}
-
-				_, builded := languagesBuildCommands[path.Ext(currentHandler.File)]
-				handlerExecutablePath := currentHandler.File
-				if builded {
-					handlerExecutablePath = path.Join(handlersFilesPath, currentHandlerName, "executable")
-				}
 
 				runCommand(
 					handlerExecutablePath,

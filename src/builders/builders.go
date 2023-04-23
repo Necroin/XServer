@@ -1,17 +1,25 @@
 package builders
 
 import (
+	"fmt"
 	"os/exec"
 )
 
 var (
-	Go = build_go
+	Go     = build_go
+	Custom = tool_build
 )
 
-func build_go(filePath string, outputPath string) error {
-	cmd := exec.Command("go", "build", "-o", outputPath, filePath)
+func tool_build(tool string, filePath string, outputPath string, flags ...string) error {
+	cmdArguments := append(flags, []string{"-o", outputPath, filePath}...)
+	fmt.Println(cmdArguments)
+	cmd := exec.Command(tool, cmdArguments...)
 	if err := cmd.Run(); err != nil {
 		return err
 	}
 	return nil
+}
+
+func build_go(filePath string, outputPath string) error {
+	return tool_build("go", filePath, outputPath, "build")
 }

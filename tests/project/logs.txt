@@ -1,6 +1,19 @@
-2023/04/22 23:13:13 INFO: [XServer] [Build] Build project
-2023/04/22 23:13:13 INFO: [XServer] [Build] build "cpp_handler" handler
-2023/04/22 23:13:13 INFO: [XServer] [Build] build "go_handler" handler
-2023/04/22 23:13:13 INFO: [XServer] Start project
-2023/04/22 23:13:24 INFO: [XServer] [go_handler Handler] handler called
-2023/04/22 23:13:24 INFO: [XServer] [go_handler Handler] run handler file
+2023/04/23 04:57:40 INFO: [XServer] [Build] Build project
+2023/04/23 04:57:40 INFO: [XServer] [Build] build "go_handler" handler
+2023/04/23 04:57:40 ERROR: [XServer] [Build] [Error] failed compile "go_handler" handler: exit status 2
+2023/04/23 04:57:40 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/23 04:57:54 INFO: [XServer] [Build] Build project
+2023/04/23 04:57:54 INFO: [XServer] [Build] build "go_handler" handler
+2023/04/23 04:57:54 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/23 04:59:48 INFO: [XServer] [Build] Build project
+2023/04/23 04:59:48 INFO: [XServer] [Build] build "go_handler" handler
+2023/04/23 04:59:48 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/23 05:00:30 INFO: [XServer] [Build] Build project
+2023/04/23 05:00:30 INFO: [XServer] [Build] build "go_handler" handler
+2023/04/23 05:00:30 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/23 05:01:03 INFO: [XServer] [Build] Build project
+2023/04/23 05:01:03 INFO: [XServer] [Build] build "go_handler" handler
+2023/04/23 05:01:03 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/23 05:01:09 INFO: [XServer] [Build] Build project
+2023/04/23 05:01:09 INFO: [XServer] [Build] build "go_handler" handler
+2023/04/23 05:01:09 INFO: [XServer] [Build] build "cpp_handler" handler
