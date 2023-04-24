@@ -20,6 +20,7 @@ func tool_build(tool string, filePath string, outputPath string, flags ...string
 	return nil
 }
 
-func build_go(filePath string, outputPath string) error {
-	return tool_build("go", filePath, outputPath, "build")
+func build_go(filePath string, outputPath string, flags ...string) error {
+	cmdArguments := append([]string{"build"}, flags...)
+	return tool_build("go", filePath, outputPath, cmdArguments...)
 }

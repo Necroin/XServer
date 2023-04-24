@@ -20,7 +20,7 @@ var (
 	}
 	configPath             = "./config.yml"
 	handlersFilesPath      = "bin/handlers/"
-	languagesBuildCommands = map[string]func(string, string) error{
+	languagesBuildCommands = map[string]func(string, string, ...string) error{
 		".go": builders.Go,
 	}
 	languagesRunCommands = map[string]func(string, http.ResponseWriter, *http.Request, func(string, error), func(string)){
@@ -50,7 +50,7 @@ func build(config *config.Config) error {
 			return fmt.Errorf("[XServer] [Build] [Error] failed create handler file directory: %s", err)
 		}
 
-		if handler.Build != nil {
+		if handler.Build != nil && handler.Build.Tool != "" {
 			if err := builders.Custom(handler.Build.Tool, handler.File, path.Join(handlersFilesPath, handlerName, "executable"), handler.Build.Flags...); err != nil {
 				logger.Error(fmt.Sprintf(`[XServer] [Build] [Error] failed compile "%s" handler: %s`, handlerName, err))
 			}
@@ -59,10 +59,17 @@ func build(config *config.Config) error {
 
 		buildCommand, ok := languagesBuildCommands[path.Ext(handler.File)]
 		if ok {
-			if err := buildCommand(handler.File, path.Join(handlersFilesPath, handlerName, "executable")); err != nil {
+			flags := []string{}
+			if handler.Build != nil {
+				flags = handler.Build.Flags
+			}
+			if err := buildCommand(handler.File, path.Join(handlersFilesPath, handlerName, "executable"), flags...); err != nil {
 				logger.Error(fmt.Sprintf(`[XServer] [Build] [Error] failed compile "%s" handler: %s`, handlerName, err))
 			}
+			return nil
 		}
+
+		logger.Info(fmt.Sprintf(`[XServer] [Build] handler "%s" has not any build options -> skip`, handlerName))
 	}
 	return nil
 }

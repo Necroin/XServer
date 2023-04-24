@@ -17,3 +17,36 @@
 2023/04/23 05:01:09 INFO: [XServer] [Build] Build project
 2023/04/23 05:01:09 INFO: [XServer] [Build] build "go_handler" handler
 2023/04/23 05:01:09 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/23 05:06:58 INFO: [XServer] [Build] Build project
+2023/04/23 05:06:58 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/23 05:06:59 INFO: [XServer] Start project
+2023/04/23 05:07:00 INFO: [XServer] [go_handler Handler] handler called
+2023/04/23 05:07:00 INFO: [XServer] [go_handler Handler] run handler file
+2023/04/23 05:07:00 ERROR: [XServer] [go_handler Handler] [Error] failed run handler file: fork/exec bin/handlers/go_handler/executable: no such file or directory
+2023/04/23 05:07:08 INFO: [XServer] [go_handler Handler] handler called
+2023/04/23 05:07:08 INFO: [XServer] [go_handler Handler] run handler file
+2023/04/23 05:07:08 ERROR: [XServer] [go_handler Handler] [Error] failed run handler file: fork/exec bin/handlers/go_handler/executable: no such file or directory
+2023/04/23 05:07:26 INFO: [XServer] [Build] Build project
+2023/04/23 05:07:26 INFO: [XServer] [Build] build "go_handler" handler
+2023/04/23 05:07:26 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/23 05:07:26 INFO: [XServer] Start project
+2023/04/23 05:07:33 INFO: [XServer] [go_handler Handler] handler called
+2023/04/23 05:07:33 INFO: [XServer] [go_handler Handler] run handler file
+2023/04/23 05:07:33 INFO: [XServer] [cpp_handler Handler] handler called
+2023/04/23 05:07:33 INFO: [XServer] [cpp_handler Handler] run handler file
+2023/04/23 05:07:42 INFO: [XServer] [Build] Build project
+2023/04/23 05:07:42 INFO: [XServer] [Build] build "go_handler" handler
+2023/04/23 05:07:43 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/23 05:07:43 INFO: [XServer] Start project
+2023/04/23 05:07:45 INFO: [XServer] [go_handler Handler] handler called
+2023/04/23 05:07:45 INFO: [XServer] [go_handler Handler] run handler file
+2023/04/23 05:07:45 INFO: [XServer] [cpp_handler Handler] handler called
+2023/04/23 05:07:45 INFO: [XServer] [cpp_handler Handler] run handler file
+2023/04/23 05:07:47 INFO: [XServer] [go_handler Handler] handler called
+2023/04/23 05:07:47 INFO: [XServer] [go_handler Handler] run handler file
+2023/04/23 05:07:47 INFO: [XServer] [cpp_handler Handler] handler called
+2023/04/23 05:07:47 INFO: [XServer] [cpp_handler Handler] run handler file
+2023/04/23 05:07:47 INFO: [XServer] [go_handler Handler] handler called
+2023/04/23 05:07:47 INFO: [XServer] [go_handler Handler] run handler file
+2023/04/23 05:07:47 INFO: [XServer] [cpp_handler Handler] handler called
+2023/04/23 05:07:47 INFO: [XServer] [cpp_handler Handler] run handler file
