@@ -16,7 +16,7 @@ handlers:
         - -static
 
   python_handler:
-    path: /cpp_handler
+    path: /python_handler
     file: handlers/python/handler.py
     run:
       tool: python3

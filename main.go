@@ -54,7 +54,7 @@ func build(config *config.Config) error {
 			if err := builders.Custom(handler.Build.Tool, handler.File, path.Join(handlersFilesPath, handlerName, "executable"), handler.Build.Flags...); err != nil {
 				logger.Error(fmt.Sprintf(`[XServer] [Build] [Error] failed compile "%s" handler: %s`, handlerName, err))
 			}
-			return nil
+			continue
 		}
 
 		buildCommand, ok := languagesBuildCommands[path.Ext(handler.File)]
@@ -66,7 +66,7 @@ func build(config *config.Config) error {
 			if err := buildCommand(handler.File, path.Join(handlersFilesPath, handlerName, "executable"), flags...); err != nil {
 				logger.Error(fmt.Sprintf(`[XServer] [Build] [Error] failed compile "%s" handler: %s`, handlerName, err))
 			}
-			return nil
+			continue
 		}
 
 		logger.Info(fmt.Sprintf(`[XServer] [Build] handler "%s" has not any build options -> skip`, handlerName))
@@ -99,6 +99,12 @@ func start(config *config.Config) error {
 			} else {
 				message := fmt.Sprintf("[XServer] [%s Handler] [Error] run command is unknown", currentHandlerName)
 				logger.Error(message)
+			}
+		}
+
+		if handler.Run != nil && handler.Run.Tool != "" {
+			runCommand = func(path string, writer http.ResponseWriter, request *http.Request, errorCallback func(string, error), logCallback func(string)) {
+				runners.Tool(currentHandler.Run.Tool, path, writer, request, errorCallback, logCallback)
 			}
 		}
 

@@ -12,10 +12,16 @@ type Build struct {
 	Flags []string `yaml:"flags"`
 }
 
+type Run struct {
+	Tool      string   `yaml:"tool"`
+	Arguments []string `yaml:"arguments"`
+}
+
 type Handler struct {
 	Path  string
 	File  string
 	Build *Build `yaml:"build"`
+	Run   *Run   `yaml:"run"`
 }
 
 type Config struct {
