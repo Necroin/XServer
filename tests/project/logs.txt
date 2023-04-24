@@ -1,70 +1,26 @@
-2023/04/24 23:23:41 INFO: [XServer] [Build] Build project
-2023/04/24 23:23:41 INFO: [XServer] [Build] build "go_handler" handler
-2023/04/24 23:23:41 INFO: [XServer] Start project
-2023/04/24 23:23:41 ERROR: [XServer] [python_handler Handler] [Error] run command is unknown
-2023/04/24 23:25:36 INFO: [XServer] [Build] Build project
-2023/04/24 23:25:36 INFO: [XServer] [Build] build "go_handler" handler
-2023/04/24 23:25:41 INFO: [XServer] [Build] Build project
-2023/04/24 23:25:41 INFO: [XServer] [Build] build "go_handler" handler
-2023/04/24 23:26:23 INFO: [XServer] [Build] Build project
-2023/04/24 23:26:23 INFO: [XServer] [Build] build "go_handler" handler
-2023/04/24 23:26:24 INFO: [XServer] [Build] handler "go_handler" has not any build options -> skip
-2023/04/24 23:26:24 INFO: [XServer] [Build] build "cpp_handler" handler
-2023/04/24 23:27:12 INFO: [XServer] [Build] Build project
-2023/04/24 23:27:12 INFO: [XServer] [Build] build "cpp_handler" handler
-2023/04/24 23:27:12 INFO: [XServer] Start project
-2023/04/24 23:27:12 ERROR: [XServer] [python_handler Handler] [Error] run command is unknown
-2023/04/24 23:27:15 INFO: [XServer] [go_handler Handler] handler called
-2023/04/24 23:27:15 INFO: [XServer] [go_handler Handler] run handler file
-2023/04/24 23:27:15 ERROR: [XServer] [go_handler Handler] [Error] failed run handler file: fork/exec bin/handlers/go_handler/executable: no such file or directory
-2023/04/24 23:27:18 INFO: [XServer] [go_handler Handler] handler called
-2023/04/24 23:27:18 INFO: [XServer] [go_handler Handler] run handler file
-2023/04/24 23:27:18 ERROR: [XServer] [go_handler Handler] [Error] failed run handler file: fork/exec bin/handlers/go_handler/executable: no such file or directory
-2023/04/24 23:27:29 INFO: [XServer] [Build] Build project
-2023/04/24 23:27:29 INFO: [XServer] [Build] build "go_handler" handler
-2023/04/24 23:27:29 INFO: [XServer] [Build] handler "go_handler" has not any build options -> skip
-2023/04/24 23:27:29 INFO: [XServer] [Build] build "cpp_handler" handler
-2023/04/24 23:27:29 INFO: [XServer] Start project
-2023/04/24 23:27:29 ERROR: [XServer] [python_handler Handler] [Error] run command is unknown
-2023/04/24 23:29:21 INFO: [XServer] [Build] Build project
-2023/04/24 23:29:21 INFO: [XServer] [Build] build "go_handler" handler
-2023/04/24 23:29:21 INFO: [XServer] [Build] handler "go_handler" has not any build options -> skip
-2023/04/24 23:29:21 INFO: [XServer] [Build] build "cpp_handler" handler
-2023/04/24 23:29:21 INFO: [XServer] [Build] build "python_handler" handler
-2023/04/24 23:29:21 INFO: [XServer] Start project
-2023/04/24 23:29:21 ERROR: [XServer] [python_handler Handler] [Error] run command is unknown
-2023/04/24 23:29:36 INFO: [XServer] [go_handler Handler] handler called
-2023/04/24 23:29:36 INFO: [XServer] [go_handler Handler] run handler file
-2023/04/24 23:29:36 INFO: [XServer] [cpp_handler Handler] handler called
-2023/04/24 23:29:36 INFO: [XServer] [cpp_handler Handler] run handler file
-2023/04/24 23:29:36 INFO: [XServer] [python_handler Handler] handler called
-2023/04/24 23:29:36 INFO: [XServer] [python_handler Handler] run handler file
-2023/04/24 23:29:39 INFO: [XServer] [go_handler Handler] handler called
-2023/04/24 23:29:39 INFO: [XServer] [go_handler Handler] run handler file
-2023/04/24 23:29:39 INFO: [XServer] [cpp_handler Handler] handler called
-2023/04/24 23:29:39 INFO: [XServer] [cpp_handler Handler] run handler file
-2023/04/24 23:29:39 INFO: [XServer] [python_handler Handler] handler called
-2023/04/24 23:29:39 INFO: [XServer] [python_handler Handler] run handler file
-2023/04/24 23:29:41 INFO: [XServer] [go_handler Handler] handler called
-2023/04/24 23:29:41 INFO: [XServer] [go_handler Handler] run handler file
-2023/04/24 23:29:41 INFO: [XServer] [cpp_handler Handler] handler called
-2023/04/24 23:29:41 INFO: [XServer] [cpp_handler Handler] run handler file
-2023/04/24 23:29:41 INFO: [XServer] [python_handler Handler] handler called
-2023/04/24 23:29:41 INFO: [XServer] [python_handler Handler] run handler file
-2023/04/24 23:29:59 INFO: [XServer] [go_handler Handler] handler called
-2023/04/24 23:29:59 INFO: [XServer] [go_handler Handler] run handler file
-2023/04/24 23:29:59 INFO: [XServer] [cpp_handler Handler] handler called
-2023/04/24 23:29:59 INFO: [XServer] [cpp_handler Handler] run handler file
-2023/04/24 23:29:59 INFO: [XServer] [python_handler Handler] handler called
-2023/04/24 23:29:59 INFO: [XServer] [python_handler Handler] run handler file
-2023/04/24 23:30:06 INFO: [XServer] [go_handler Handler] handler called
-2023/04/24 23:30:06 INFO: [XServer] [go_handler Handler] run handler file
-2023/04/24 23:30:06 INFO: [XServer] [cpp_handler Handler] handler called
-2023/04/24 23:30:06 INFO: [XServer] [cpp_handler Handler] run handler file
-2023/04/24 23:30:06 INFO: [XServer] [python_handler Handler] handler called
-2023/04/24 23:30:06 INFO: [XServer] [python_handler Handler] run handler file
-2023/04/24 23:31:42 INFO: [XServer] [Build] Build project
-2023/04/24 23:31:42 INFO: [XServer] [Build] build "go_handler" handler
-2023/04/24 23:31:43 INFO: [XServer] [Build] handler "go_handler" has not any build options -> skip
-2023/04/24 23:31:43 INFO: [XServer] [Build] build "cpp_handler" handler
-2023/04/24 23:31:43 INFO: [XServer] [Build] build "python_handler" handler
+2023/04/24 23:40:01 INFO: [XServer] [Build] Build project
+2023/04/24 23:40:01 INFO: [XServer] [Build] build "go_handler" handler
+2023/04/24 23:40:01 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/24 23:40:01 INFO: [XServer] [Build] handler "cpp_handler" has specified build options -> build by options
+2023/04/24 23:40:02 INFO: [XServer] [Build] build "python_handler" handler
+2023/04/24 23:40:15 INFO: [XServer] [Build] Build project
+2023/04/24 23:40:15 INFO: [XServer] [Build] build "go_handler" handler
+2023/04/24 23:40:15 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/24 23:40:15 INFO: [XServer] [Build] handler "cpp_handler" has specified build options -> build by options
+2023/04/24 23:40:15 INFO: [XServer] [Build] build "python_handler" handler
+2023/04/24 23:40:20 INFO: [XServer] [Build] Build project
+2023/04/24 23:40:20 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/24 23:40:20 INFO: [XServer] [Build] handler "cpp_handler" has specified build options -> build by options
+2023/04/24 23:40:20 INFO: [XServer] [Build] build "python_handler" handler
+2023/04/24 23:40:20 INFO: [XServer] [Build] handler "python_handler" has not any build options -> skip
+2023/04/24 23:40:20 INFO: [XServer] [Build] build "go_handler" handler
+2023/04/24 23:40:30 INFO: [XServer] [Build] Build project
+2023/04/24 23:40:30 INFO: [XServer] [Build] build "go_handler" handler
+2023/04/24 23:40:30 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/24 23:40:30 INFO: [XServer] [Build] handler "cpp_handler" has specified build options -> build by options
+2023/04/24 23:40:30 INFO: [XServer] [Build] build "python_handler" handler
+2023/04/24 23:40:41 INFO: [XServer] [Build] Build project
+2023/04/24 23:40:41 INFO: [XServer] [Build] build "go_handler" handler
+2023/04/24 23:40:41 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/04/24 23:40:41 INFO: [XServer] [Build] handler "cpp_handler" has specified build options -> build by options
+2023/04/24 23:40:41 INFO: [XServer] [Build] build "python_handler" handler

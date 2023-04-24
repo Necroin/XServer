@@ -51,6 +51,7 @@ func build(config *config.Config) error {
 		}
 
 		if handler.Build != nil && handler.Build.Tool != "" {
+			logger.Info(fmt.Sprintf(`[XServer] [Build] handler "%s" has specified build options -> build by options`, handlerName))
 			if err := builders.Custom(handler.Build.Tool, handler.File, path.Join(handlersFilesPath, handlerName, "executable"), handler.Build.Flags...); err != nil {
 				logger.Error(fmt.Sprintf(`[XServer] [Build] [Error] failed compile "%s" handler: %s`, handlerName, err))
 			}
@@ -58,6 +59,7 @@ func build(config *config.Config) error {
 		}
 
 		buildCommand, ok := languagesBuildCommands[path.Ext(handler.File)]
+
 		if ok {
 			flags := []string{}
 			if handler.Build != nil {
@@ -68,7 +70,6 @@ func build(config *config.Config) error {
 			}
 			continue
 		}
-
 		logger.Info(fmt.Sprintf(`[XServer] [Build] handler "%s" has not any build options -> skip`, handlerName))
 	}
 	return nil
