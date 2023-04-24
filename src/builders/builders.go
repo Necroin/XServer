@@ -5,12 +5,7 @@ import (
 	"os/exec"
 )
 
-var (
-	Go     = build_go
-	Custom = tool_build
-)
-
-func tool_build(tool string, filePath string, outputPath string, flags ...string) error {
+func Tool(tool string, filePath string, outputPath string, flags ...string) error {
 	cmdArguments := append(flags, []string{"-o", outputPath, filePath}...)
 	fmt.Println(cmdArguments)
 	cmd := exec.Command(tool, cmdArguments...)
@@ -20,7 +15,11 @@ func tool_build(tool string, filePath string, outputPath string, flags ...string
 	return nil
 }
 
-func build_go(filePath string, outputPath string, flags ...string) error {
+func Go(filePath string, outputPath string, flags ...string) error {
 	cmdArguments := append([]string{"build"}, flags...)
-	return tool_build("go", filePath, outputPath, cmdArguments...)
+	return Tool("go", filePath, outputPath, cmdArguments...)
+}
+
+func Cpp(filePath string, outputPath string, flags ...string) error {
+	return Tool("go", filePath, outputPath, flags...)
 }

@@ -21,10 +21,12 @@ var (
 	configPath             = "./config.yml"
 	handlersFilesPath      = "bin/handlers/"
 	languagesBuildCommands = map[string]func(string, string, ...string) error{
-		".go": builders.Go,
+		".go":  builders.Go,
+		".cpp": builders.Cpp,
 	}
 	languagesRunCommands = map[string]func(string, http.ResponseWriter, *http.Request, func(string, error), func(string)){
-		".go": runners.Executable,
+		".go":  runners.Executable,
+		".cpp": runners.Executable,
 	}
 )
 
@@ -52,7 +54,7 @@ func build(config *config.Config) error {
 
 		if handler.Build != nil && handler.Build.Tool != "" {
 			logger.Info(fmt.Sprintf(`[XServer] [Build] handler "%s" has specified build options -> build by options`, handlerName))
-			if err := builders.Custom(handler.Build.Tool, handler.File, path.Join(handlersFilesPath, handlerName, "executable"), handler.Build.Flags...); err != nil {
+			if err := builders.Tool(handler.Build.Tool, handler.File, path.Join(handlersFilesPath, handlerName, "executable"), handler.Build.Flags...); err != nil {
 				logger.Error(fmt.Sprintf(`[XServer] [Build] [Error] failed compile "%s" handler: %s`, handlerName, err))
 			}
 			continue
