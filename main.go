@@ -24,7 +24,7 @@ var (
 		".go":  builders.Go,
 		".cpp": builders.Cpp,
 	}
-	languagesRunCommands = map[string]func(string, http.ResponseWriter, *http.Request, func(string, error), func(string)){
+	languagesRunCommands = map[string]func(string, http.ResponseWriter, *http.Request, func(string, error), func(string), ...string){
 		".go":  runners.Executable,
 		".cpp": runners.Executable,
 	}
@@ -88,7 +88,7 @@ func start(config *config.Config) error {
 		currentHandler := handler
 
 		_, builded := languagesBuildCommands[path.Ext(currentHandler.File)]
-		builded = builded || handler.Build != nil
+		builded = builded || currentHandler.Build != nil
 		handlerExecutablePath := currentHandler.File
 		if builded {
 			handlerExecutablePath = path.Join(handlersFilesPath, currentHandlerName, "executable")
@@ -105,10 +105,15 @@ func start(config *config.Config) error {
 			}
 		}
 
-		if handler.Run != nil && handler.Run.Tool != "" {
-			runCommand = func(path string, writer http.ResponseWriter, request *http.Request, errorCallback func(string, error), logCallback func(string)) {
-				runners.Tool(currentHandler.Run.Tool, path, writer, request, errorCallback, logCallback)
+		if currentHandler.Run != nil && currentHandler.Run.Tool != "" {
+			runCommand = func(path string, writer http.ResponseWriter, request *http.Request, errorCallback func(string, error), logCallback func(string), args ...string) {
+				runners.Tool(currentHandler.Run.Tool, path, writer, request, errorCallback, logCallback, args...)
 			}
+		}
+
+		args := []string{}
+		if currentHandler.Run != nil {
+			args = append(args, currentHandler.Run.Args...)
 		}
 
 		xserver.AddHandler(
@@ -128,6 +133,7 @@ func start(config *config.Config) error {
 					func(message string) {
 						logger.Info(fmt.Sprintf("[XServer] [%s Handler] %s", currentHandlerName, message))
 					},
+					args...,
 				)
 			},
 			"POST",

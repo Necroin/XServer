@@ -13,8 +13,8 @@ type Build struct {
 }
 
 type Run struct {
-	Tool      string   `yaml:"tool"`
-	Arguments []string `yaml:"arguments"`
+	Tool string   `yaml:"tool"`
+	Args []string `yaml:"arguments"`
 }
 
 type Handler struct {
