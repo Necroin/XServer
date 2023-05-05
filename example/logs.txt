@@ -1,0 +1,39 @@
+2023/05/05 20:43:52 INFO: [XServer] [Build] Build project
+2023/05/05 20:43:52 INFO: [XServer] [Build] build "go_handler" handler
+2023/05/05 20:43:53 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/05/05 20:43:53 INFO: [XServer] [Build] handler "cpp_handler" has specified build options -> build by options
+2023/05/05 20:43:53 INFO: [XServer] [Build] build "python_handler" handler
+2023/05/05 20:44:12 INFO: [XServer] [Build] Build project
+2023/05/05 20:44:12 INFO: [XServer] [Build] build "go_handler" handler
+2023/05/05 20:44:12 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/05/05 20:44:12 INFO: [XServer] [Build] handler "cpp_handler" has specified build options -> build by options
+2023/05/05 20:44:13 INFO: [XServer] [Build] build "python_handler" handler
+2023/05/05 20:44:18 INFO: [XServer] [Build] Build project
+2023/05/05 20:44:18 INFO: [XServer] [Build] build "go_handler" handler
+2023/05/05 20:44:18 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/05/05 20:44:18 INFO: [XServer] [Build] handler "cpp_handler" has specified build options -> build by options
+2023/05/05 20:44:18 INFO: [XServer] [Build] build "python_handler" handler
+2023/05/05 20:44:21 INFO: [XServer] Start project
+2023/05/05 20:44:26 INFO: [XServer] [go_handler Handler] handler called
+2023/05/05 20:44:26 INFO: [XServer] [go_handler Handler] run handler file
+2023/05/05 20:44:26 INFO: [XServer] [cpp_handler Handler] handler called
+2023/05/05 20:44:26 INFO: [XServer] [cpp_handler Handler] run handler file
+2023/05/05 20:44:26 INFO: [XServer] [python_handler Handler] handler called
+2023/05/05 20:44:26 INFO: [XServer] [python_handler Handler] run handler file
+2023/05/05 21:04:24 INFO: [XServer] [Build] Build project
+2023/05/05 21:04:24 INFO: [XServer] [Build] build "go_handler" handler
+2023/05/05 21:04:25 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/05/05 21:04:25 INFO: [XServer] [Build] handler "cpp_handler" has specified build options -> build by options
+2023/05/05 21:04:25 INFO: [XServer] [Build] build "python_handler" handler
+2023/05/05 21:05:33 INFO: [XServer] [Build] Build project
+2023/05/05 21:05:33 INFO: [XServer] [Build] build "go_handler" handler
+2023/05/05 21:05:33 INFO: [XServer] [Build] build "cpp_handler" handler
+2023/05/05 21:05:33 INFO: [XServer] [Build] handler "cpp_handler" has specified build options -> build by options
+2023/05/05 21:05:34 INFO: [XServer] [Build] build "python_handler" handler
+2023/05/05 21:05:34 INFO: [XServer] Start project
+2023/05/05 21:05:36 INFO: [XServer] [go_handler Handler] handler called
+2023/05/05 21:05:36 INFO: [XServer] [go_handler Handler] run handler file
+2023/05/05 21:05:36 INFO: [XServer] [cpp_handler Handler] handler called
+2023/05/05 21:05:36 INFO: [XServer] [cpp_handler Handler] run handler file
+2023/05/05 21:05:36 INFO: [XServer] [python_handler Handler] handler called
+2023/05/05 21:05:36 INFO: [XServer] [python_handler Handler] run handler file

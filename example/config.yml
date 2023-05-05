@@ -20,3 +20,11 @@ handlers:
     file: handlers/python/handler.py
     run:
       tool: python3
+
+tasks:
+  5_sec_periodic:
+    file: tasks/5_sec_periodic.py
+    period:
+      cron: "* * * * * *"
+    run:
+      tool: python3

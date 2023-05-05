@@ -2,30 +2,13 @@ package server
 
 import (
 	"net/http"
-
-	"github.com/gorilla/mux"
+	"xserver/src/config"
 )
 
-type ServerOptions struct {
-	Url string
+func AddHandler(path string, handler http.HandlerFunc) {
+	http.HandleFunc(path, handler)
 }
 
-type Server struct {
-	options *ServerOptions
-	router  *mux.Router
-}
-
-func Create(options *ServerOptions) *Server {
-	return &Server{
-		options: options,
-		router:  mux.NewRouter(),
-	}
-}
-
-func (xserver *Server) AddHandler(path string, handler http.HandlerFunc, methood string) {
-	xserver.router.HandleFunc(path, handler)
-}
-
-func (xserver *Server) Start() error {
-	return http.ListenAndServe(xserver.options.Url, xserver.router)
+func Start(config *config.Config) error {
+	return http.ListenAndServe(config.Url, nil)
 }
