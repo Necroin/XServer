@@ -15,9 +15,8 @@ import (
 
 var (
 	commands = map[string]func(config *config.Config) error{
-		"create": create,
-		"build":  build,
-		"start":  start,
+		"build": build,
+		"start": start,
 	}
 	configPath             = "./config.yml"
 	handlersFilesPath      = "bin/handlers/"
@@ -30,11 +29,6 @@ var (
 		".cpp": runners.Executable,
 	}
 )
-
-func create(config *config.Config) error {
-	logger.Info("XServer: create project.")
-	return nil
-}
 
 func build(config *config.Config) error {
 	logger.Info("[XServer] [Build] Build project")
