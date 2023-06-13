@@ -24,22 +24,10 @@ type Handler struct {
 	Run   *Run   `yaml:"run"`
 }
 
-type TaskPeriod struct {
-	Cron string `yaml:"cron"`
-}
-
-type Task struct {
-	File   string     `yaml:"file"`
-	Period TaskPeriod `yaml:"period"`
-	Build  *Build     `yaml:"build"`
-	Run    *Run       `yaml:"run"`
-}
-
 type Config struct {
 	Url      string             `yaml:"url"`
 	LogsPath string             `yaml:"logs"`
 	Handlers map[string]Handler `yaml:"handlers"`
-	Tasks    map[string]Task    `yaml:"tasks"`
 }
 
 func Load(path string) (*Config, error) {
