@@ -1,7 +1,7 @@
 all: build start
 
 start:
-	../xserver start
+	../bin/xserver start
 
 build:
-	../xserver build
+	../bin/xserver build

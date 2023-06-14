@@ -1,6 +1,6 @@
 ---
 url: localhost:3301
-logs: ./logs.txt
+log: ./logs.txt
 
 handlers:
   go_handler:
@@ -20,3 +20,14 @@ handlers:
     file: handlers/python/handler.py
     run:
       tool: python3
+
+tasks:
+  5_sec_periodic:
+    file: tasks/5_sec_periodic.py
+    period: "*/5 * * * * *"
+    run:
+      tool: python3
+
+  10_sec_periodic:
+    file: tasks/10_sec_periodic.go
+    period: "*/10 * * * * *"

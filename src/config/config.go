@@ -17,17 +17,19 @@ type Run struct {
 	Args []string `yaml:"arguments"`
 }
 
-type Handler struct {
-	Path  string `yaml:"path"`
-	File  string `yaml:"file"`
-	Build *Build `yaml:"build"`
-	Run   *Run   `yaml:"run"`
+type ExecutableServerUnit struct {
+	Path   string `yaml:"path"`
+	File   string `yaml:"file"`
+	Period string `yaml:"period"`
+	Build  *Build `yaml:"build"`
+	Run    *Run   `yaml:"run"`
 }
 
 type Config struct {
-	Url      string             `yaml:"url"`
-	LogsPath string             `yaml:"logs"`
-	Handlers map[string]Handler `yaml:"handlers"`
+	Url      string                          `yaml:"url"`
+	LogsPath string                          `yaml:"log"`
+	Handlers map[string]ExecutableServerUnit `yaml:"handlers"`
+	Tasks    map[string]ExecutableServerUnit `yaml:"tasks"`
 }
 
 func Load(path string) (*Config, error) {
@@ -44,6 +46,6 @@ func Load(path string) (*Config, error) {
 		return nil, fmt.Errorf("[Config] [Error] failed map config file: %s\n", err)
 	}
 
-	fmt.Println("[Config] Config loaded successfully: ", config)
+	fmt.Println("[Config] config loaded successfully: ", config)
 	return config, nil
 }

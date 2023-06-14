@@ -1,13 +1,11 @@
 package builders
 
 import (
-	"fmt"
 	"os/exec"
 )
 
 func Tool(tool string, filePath string, outputPath string, flags ...string) error {
 	cmdArguments := append(flags, []string{"-o", outputPath, filePath}...)
-	fmt.Println(cmdArguments)
 	cmd := exec.Command(tool, cmdArguments...)
 	if err := cmd.Run(); err != nil {
 		return err
