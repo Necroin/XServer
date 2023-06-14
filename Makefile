@@ -1,4 +1,4 @@
 all: build
 
 build:
-	go build -o xserver src/main.go
+	go build -o bin/xserver src/main.go
