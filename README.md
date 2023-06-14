@@ -4,7 +4,7 @@ ___
 ## Create Config
 Create `config.yml` file to define server parameters and handlers.
 
-https://github.com/Necroin/XServer/blob/b6a49e6d598e351473c545d2094763a12db82cb5/example/config.yml?plain=1#L1-L22
+https://github.com/Necroin/XServer/blob/ef4efe846259a1a0c2f65efd97a462a20df6efbe/example/config.yml#L1-L33
 
 ## Build project
 If your project contains compiled programming languages, you need to build all handlers of this type before start.
