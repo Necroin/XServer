@@ -4,11 +4,17 @@ Server with multiple programming languages support.
 [Project Example](/example/)
 ___
 ## Supported languages
-At the moment, the standard languages for assembly and run are:
+At the moment, the standard languages for assembly are:
 - `Golang`
 - `C/C++`
 
-If your language is not in the list of standard languages or you want to use additional options for the build and/or, you can use the `build` and/or `run` options in the configuration file for handler or task.
+For run:
+- `Golang`
+- `C/C++`
+- `Python`
+- `Lua`
+
+If your language is not in the list of standard languages or you want to use additional options for the build and/or run, you can use the `build` and/or `run` options in the configuration file for handler or task.
 ___
 ## Assembly
 Build manually for your platform
