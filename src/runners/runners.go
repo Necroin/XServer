@@ -40,3 +40,11 @@ func Tool(tool string, path string, writer io.Writer, request io.Reader, errorCa
 	cmdArgs := append([]string{path}, args...)
 	Executable(tool, writer, request, errorCallback, logCallback, cmdArgs...)
 }
+
+func Python(path string, writer io.Writer, request io.Reader, errorCallback func(string, error), logCallback func(string), args ...string) {
+	Tool("python", path, writer, request, errorCallback, logCallback, args...)
+}
+
+func Lua(path string, writer io.Writer, request io.Reader, errorCallback func(string, error), logCallback func(string), args ...string) {
+	Tool("lua", path, writer, request, errorCallback, logCallback, args...)
+}

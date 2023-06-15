@@ -35,6 +35,8 @@ var (
 		".go":  runners.Executable,
 		".c":   runners.Executable,
 		".cpp": runners.Executable,
+		".py":  runners.Python,
+		".lua": runners.Lua,
 	}
 )
 
