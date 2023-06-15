@@ -28,10 +28,12 @@ var (
 
 	languagesBuildCommands = map[string]func(string, string, ...string) error{
 		".go":  builders.Go,
+		".c":   builders.Cpp,
 		".cpp": builders.Cpp,
 	}
 	languagesRunCommands = map[string]func(string, io.Writer, io.Reader, func(string, error), func(string), ...string){
 		".go":  runners.Executable,
+		".c":   runners.Executable,
 		".cpp": runners.Executable,
 	}
 )
