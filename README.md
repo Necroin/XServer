@@ -16,11 +16,32 @@ Build manually for your platform
 go build -o xserver src/main.go
 ```
 ___
+## Configuration file
+The configuration file uses the `yaml` format.
+
+Server uses the following configuration file structure:
+- `url` - server url
+- `log` - path to log file
+- `handlers` - section for server handlers
+  - `handler name` - defines the handler and makes it unique
+    - `path` - server handler path
+    - `file` - path to handler file
+    - `build` - use for custom build, optional
+      - `tool` - tool for build e.g. `gcc`/`g++`, optional
+      - `flags` -  list of build flags, optional
+    - `run` - use for custom handler run, optional
+      - `tool` - tool for run e.g. `python`/`lua`, optional
+      - `flags` -  list of run flags, optional
+- `tasks` - section for server tasks
+  - `handler name` - defines the task and makes it unique
+    - `file` - path to handler file
+    - `period` - cron formatted period
+    - `build` - same as in `handlers` section
+    - `run` - same as in `handlers` section
+___
 ## Usage
 ### 1. Create Config
 Create `config.yml` file to define server, handlers and periodic tasks.
-
-https://github.com/Necroin/XServer/blob/ef4efe846259a1a0c2f65efd97a462a20df6efbe/example/config.yml#L1-L33
 
 ### 2. Build project
 You need to build all handlers and tasks before starting server.
