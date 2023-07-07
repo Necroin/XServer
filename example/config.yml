@@ -1,7 +1,10 @@
 ---
 url: localhost:3301
+
 log: ./logs.txt
-log_level: info
+log_level: debug
+
+database: true
 
 handlers:
   go_handler:

@@ -1,4 +1,4 @@
-all: build
+all: build example-tests
 
 build:
 	go build -o bin/xserver src/main.go

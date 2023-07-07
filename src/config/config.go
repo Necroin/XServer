@@ -27,11 +27,12 @@ type ExecutableServerUnit struct {
 }
 
 type Config struct {
-	Url      string                          `yaml:"url"`
-	LogsPath string                          `yaml:"log"`
-	LogLevel string                          `yaml:"log_level"`
-	Handlers map[string]ExecutableServerUnit `yaml:"handlers"`
-	Tasks    map[string]ExecutableServerUnit `yaml:"tasks"`
+	Url            string                          `yaml:"url"`
+	LogsPath       string                          `yaml:"log"`
+	LogLevel       string                          `yaml:"log_level"`
+	DatabaseEnable bool                            `yaml:"database"`
+	Handlers       map[string]ExecutableServerUnit `yaml:"handlers"`
+	Tasks          map[string]ExecutableServerUnit `yaml:"tasks"`
 }
 
 func Load(path string) (*Config, error) {

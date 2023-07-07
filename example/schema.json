@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Users",
+        "fields": [
+            {
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "name": "age",
+                "type": "integer"
+            }
+        ],
+        "primary_key": ["name"]
+    }
+]

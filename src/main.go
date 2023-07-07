@@ -9,6 +9,7 @@ import (
 	"path"
 	"xserver/src/builders"
 	"xserver/src/config"
+	"xserver/src/database"
 	"xserver/src/logger"
 	"xserver/src/runners"
 	"xserver/src/server"
@@ -194,8 +195,74 @@ func start(config *config.Config) error {
 			},
 		)
 	}
-	cron.Start()
 
+	if config.DatabaseEnable {
+		database, err := database.Create()
+		if err != nil {
+			return err
+		}
+		defer database.Close()
+
+		server.AddHandler(
+			"/db/insert",
+			func(writer http.ResponseWriter, request *http.Request) {
+				if err := database.Insert(request.Body, writer); err != nil {
+					logger.Error(err.Error())
+					writer.Write([]byte(fmt.Sprintf(`{"result": false, "error": "%s"}`, err) + "\n"))
+				}
+			},
+		)
+
+		server.AddHandler(
+			"/db/select",
+			func(writer http.ResponseWriter, request *http.Request) {
+				if err := database.Select(request.Body, writer); err != nil {
+					logger.Error(err.Error())
+					writer.Write([]byte(fmt.Sprintf(`{"result": [], "error": "%s"}`, err) + "\n"))
+				}
+			},
+		)
+
+		server.AddHandler(
+			"/db/update",
+			func(writer http.ResponseWriter, request *http.Request) {
+				if err := database.Update(request.Body, writer); err != nil {
+					logger.Error(err.Error())
+					writer.Write([]byte(fmt.Sprintf(`{"result": false, "error": "%s"}`, err) + "\n"))
+				}
+			},
+		)
+
+		server.AddHandler(
+			"/db/delete",
+			func(writer http.ResponseWriter, request *http.Request) {
+				if err := database.Delete(request.Body, writer); err != nil {
+					logger.Error(err.Error())
+					writer.Write([]byte(fmt.Sprintf(`{"result": false, "error": "%s"}`, err) + "\n"))
+				}
+			},
+		)
+
+		server.AddHandler(
+			"/db/set_schema",
+			func(writer http.ResponseWriter, request *http.Request) {
+				if err := database.SetSchema(request.Body); err != nil {
+					logger.Error(err.Error())
+					writer.Write([]byte(fmt.Sprintf(`{"result": false, "error": "%s"}`, err) + "\n"))
+				}
+				writer.Write([]byte(`{"result": true}`))
+			},
+		)
+	}
+
+	server.AddHandler(
+		"/status",
+		func(writer http.ResponseWriter, request *http.Request) {
+			writer.Write([]byte("OK"))
+		},
+	)
+
+	cron.Start()
 	err := server.Start(config)
 	if err != nil {
 		cron.Stop()
@@ -235,7 +302,7 @@ func main() {
 	}
 
 	if err := command(config); err != nil {
-		logger.Error(err.Error())
+		fmt.Println(err)
 		return
 	}
 

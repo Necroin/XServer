@@ -1,30 +1,505 @@
-2023/07/07 19:30:41 INFO: [XServer] [Build] Build project
-2023/07/07 19:30:41 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
-2023/07/07 19:30:41 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
-2023/07/07 19:30:44 INFO: [XServer] [Build] [Handlers] build "python_handler"
-2023/07/07 19:30:44 INFO: [XServer] [Build] [Handlers] build "lua_handler"
-2023/07/07 19:30:44 INFO: [XServer] [Build] [Handlers] build "go_handler"
-2023/07/07 19:30:44 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
-2023/07/07 19:30:44 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
-2023/07/07 19:30:45 INFO: [XServer] Start project
-2023/07/07 19:31:07 INFO: [XServer] [Build] Build project
-2023/07/07 19:31:07 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
-2023/07/07 19:31:07 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
-2023/07/07 19:31:09 INFO: [XServer] [Build] [Handlers] build "python_handler"
-2023/07/07 19:31:09 INFO: [XServer] [Build] [Handlers] build "lua_handler"
-2023/07/07 19:31:09 INFO: [XServer] [Build] [Handlers] build "go_handler"
-2023/07/07 19:31:10 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
-2023/07/07 19:31:10 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
-2023/07/07 19:31:10 INFO: [XServer] Start project
-2023/07/07 19:32:35 ERROR: { "error": "[XServer] [python_handler Handler] [Error] failed run handler file: exit status 1" }
-2023/07/07 19:32:55 ERROR: { "error": "[XServer] [python_handler Handler] [Error] failed run handler file: exit status 1" }
-2023/07/07 19:41:37 INFO: [XServer] [Build] Build project
-2023/07/07 19:41:37 INFO: [XServer] [Build] [Handlers] build "go_handler"
-2023/07/07 19:41:38 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
-2023/07/07 19:41:38 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
-2023/07/07 19:41:40 INFO: [XServer] [Build] [Handlers] build "python_handler"
-2023/07/07 19:41:40 INFO: [XServer] [Build] [Handlers] build "lua_handler"
-2023/07/07 19:41:40 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
-2023/07/07 19:41:41 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
-2023/07/07 19:41:41 INFO: [XServer] Start project
-2023/07/07 19:42:12 ERROR: { "error": "[XServer] [python_handler Handler] [Error] failed run handler file: exit status 1" }
+2023/07/09 04:10:13 INFO: [XServer] Start project
+2023/07/09 04:10:16 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 04:10:16 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 04:10:16 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:10:16 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users WHERE name = 'Me'
+2023/07/09 04:10:16 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (age) VALUES (100)
+2023/07/09 04:10:16 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:10:16 ERROR: [XServer] [Database] [Select] [Error] failed scan row values: sql: Scan error on column index 0, name "name": converting NULL to string is unsupported
+2023/07/09 04:10:48 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 04:10:48 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 04:10:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:10:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users WHERE name = 'Me'
+2023/07/09 04:10:48 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (age) VALUES (100)
+2023/07/09 04:10:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:10:48 ERROR: [XServer] [Database] [Select] [Error] failed scan row values: sql: Scan error on column index 0, name "name": converting NULL to string is unsupported
+2023/07/09 04:11:42 INFO: [XServer] Start project
+2023/07/09 04:11:45 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 04:11:45 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 04:11:45 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:11:45 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users WHERE name = 'Me'
+2023/07/09 04:11:45 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 04:11:45 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:11:45 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 04:11:45 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:17:05 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 04:17:05 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 04:17:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:17:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users WHERE name = 'Me'
+2023/07/09 04:17:05 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 04:17:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:17:05 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 04:17:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:17:45 INFO: [XServer] Start project
+2023/07/09 04:17:48 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 04:17:48 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 04:17:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:17:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users WHERE name = 'Me'
+2023/07/09 04:17:48 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 04:17:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:17:48 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 04:17:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:17:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:18:38 INFO: [XServer] Start project
+2023/07/09 04:18:40 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 04:18:40 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 04:18:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:18:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users WHERE name = 'Me'
+2023/07/09 04:18:40 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 04:18:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:18:40 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 04:18:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 04:18:40 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 04:18:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT * FROM Users
+2023/07/09 06:08:52 INFO: [XServer] Start project
+2023/07/09 06:08:54 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 06:08:54 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 06:08:54 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 06:08:54 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 06:08:54 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 06:08:54 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 06:08:54 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 06:08:54 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 06:08:54 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 06:08:54 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:47:31 INFO: [XServer] [Build] Build project
+2023/07/09 07:47:31 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 07:47:32 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 07:47:32 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 07:47:35 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 07:47:35 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 07:47:35 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 07:47:35 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 07:48:11 INFO: [XServer] [Build] Build project
+2023/07/09 07:48:11 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 07:48:11 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 07:48:11 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 07:48:14 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 07:48:14 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 07:48:14 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 07:48:14 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 07:49:22 INFO: [XServer] Start project
+2023/07/09 07:49:45 INFO: [XServer] Start project
+2023/07/09 07:49:52 INFO: [XServer] [Build] Build project
+2023/07/09 07:49:52 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 07:49:52 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 07:49:52 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 07:49:55 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 07:49:55 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 07:49:55 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 07:49:55 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 07:50:06 INFO: [XServer] Start project
+2023/07/09 07:50:09 INFO: [XServer] [Build] Build project
+2023/07/09 07:50:09 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 07:50:09 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 07:50:09 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 07:50:11 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 07:50:11 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 07:50:11 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:50:11 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 07:50:11 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 07:50:11 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:50:11 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 07:50:11 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:50:11 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 07:50:11 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:50:11 ERROR: { "error": "[XServer] [cpp_handler Handler] [Error] failed run handler file: fork/exec bin/handlers/cpp_handler/executable: text file busy" }
+2023/07/09 07:50:12 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 07:50:12 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 07:50:12 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 07:50:12 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 07:50:43 INFO: [XServer] [Build] Build project
+2023/07/09 07:50:43 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 07:50:43 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 07:50:43 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 07:50:45 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 07:50:45 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 07:50:45 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:50:45 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 07:50:45 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 07:50:45 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:50:45 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 07:50:45 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:50:45 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 07:50:45 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:50:45 ERROR: { "error": "[XServer] [cpp_handler Handler] [Error] failed run handler file: fork/exec bin/handlers/cpp_handler/executable: text file busy" }
+2023/07/09 07:50:46 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 07:50:46 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 07:50:46 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 07:50:46 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 07:50:51 INFO: [XServer] [Build] Build project
+2023/07/09 07:50:51 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 07:50:51 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 07:50:51 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 07:50:51 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 07:50:51 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 07:50:54 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 07:50:54 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 07:50:54 INFO: [XServer] Start project
+2023/07/09 07:50:59 INFO: [XServer] [Build] Build project
+2023/07/09 07:50:59 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 07:50:59 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 07:51:01 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 07:51:01 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 07:51:01 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:51:01 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 07:51:01 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 07:51:01 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:51:01 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 07:51:01 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:51:01 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 07:51:01 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:51:01 ERROR: { "error": "[XServer] [go_handler Handler] [Error] failed run handler file: fork/exec bin/handlers/go_handler/executable: no such file or directory" }
+2023/07/09 07:51:02 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 07:51:02 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 07:51:02 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 07:51:02 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 07:51:02 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 07:52:23 INFO: [XServer] [Build] Build project
+2023/07/09 07:52:23 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 07:52:23 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 07:52:23 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 07:52:26 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 07:52:26 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 07:52:26 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 07:52:26 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 07:53:18 INFO: [XServer] Start project
+2023/07/09 07:55:47 INFO: [XServer] Start project
+2023/07/09 07:56:01 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 07:56:01 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 07:56:01 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:56:01 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 07:56:01 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 07:56:01 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:56:01 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 07:56:01 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:56:01 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 07:56:01 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:08 INFO: [XServer] Start project
+2023/07/09 07:57:10 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 07:57:10 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 07:57:10 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:10 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 07:57:10 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 07:57:10 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:10 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 07:57:10 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:10 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 07:57:10 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:20 INFO: [XServer] Start project
+2023/07/09 07:57:22 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 07:57:22 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 07:57:22 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:22 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 07:57:22 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 07:57:22 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:22 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 07:57:22 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:22 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 07:57:22 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:28 INFO: [XServer] [Build] Build project
+2023/07/09 07:57:28 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 07:57:28 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 07:57:28 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 07:57:30 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 07:57:30 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 07:57:30 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:30 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 07:57:30 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 07:57:30 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:30 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 07:57:30 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:30 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 07:57:30 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:30 ERROR: { "error": "[XServer] [cpp_handler Handler] [Error] failed run handler file: fork/exec bin/handlers/cpp_handler/executable: text file busy" }
+2023/07/09 07:57:31 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 07:57:31 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 07:57:31 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 07:57:31 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 07:57:46 INFO: [XServer] [Build] Build project
+2023/07/09 07:57:46 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 07:57:46 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 07:57:46 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 07:57:46 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 07:57:46 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 07:57:49 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 07:57:49 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 07:57:49 INFO: [XServer] Start project
+2023/07/09 07:57:51 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 07:57:51 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 07:57:51 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:51 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 07:57:51 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 07:57:51 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:51 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 07:57:51 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:57:51 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 07:57:51 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 07:59:56 INFO: [XServer] [Build] Build project
+2023/07/09 07:59:56 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 07:59:56 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 07:59:59 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 07:59:59 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 07:59:59 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 07:59:59 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 07:59:59 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:00:00 ERROR: { "error": "[XServer] [10_sec_periodic Task] [Error] failed run handler file: fork/exec bin/tasks/10_sec_periodic/executable: text file busy" }
+2023/07/09 08:00:00 INFO: [XServer] Start project
+2023/07/09 08:00:43 INFO: [XServer] [Build] Build project
+2023/07/09 08:00:43 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:00:44 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:00:44 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:00:47 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:00:47 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:00:47 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:00:47 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:00:47 INFO: [XServer] Start project
+2023/07/09 08:00:48 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 08:00:48 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 08:00:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:00:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 08:00:48 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 08:00:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:00:49 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 08:00:49 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:00:49 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 08:00:49 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:37:16 INFO: [XServer] [Build] Build project
+2023/07/09 08:37:16 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:37:16 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:37:16 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:37:19 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:37:19 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:37:19 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:37:19 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:37:20 INFO: [XServer] Start project
+2023/07/09 08:38:10 INFO: [XServer] [Build] Build project
+2023/07/09 08:38:10 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:38:11 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:38:13 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:38:13 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:38:13 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:38:14 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:38:14 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:38:14 INFO: [XServer] Start project
+2023/07/09 08:39:15 INFO: [XServer] [Build] Build project
+2023/07/09 08:39:15 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:39:15 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:39:16 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:39:16 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:39:18 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:39:19 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:39:19 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:39:22 INFO: [XServer] Start project
+2023/07/09 08:41:17 INFO: [XServer] Start project
+2023/07/09 08:41:26 INFO: [XServer] [Build] Build project
+2023/07/09 08:41:26 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:41:27 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:41:27 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:41:30 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:41:30 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:41:30 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:41:30 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:41:30 INFO: [XServer] Start project
+2023/07/09 08:41:31 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 08:41:31 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 08:41:31 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:41:31 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 08:41:31 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 08:41:31 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:41:31 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 08:41:31 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:41:31 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 08:41:31 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:42:09 INFO: [XServer] [Build] Build project
+2023/07/09 08:42:09 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 08:42:09 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:42:09 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 08:42:09 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:42:09 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:42:09 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:42:09 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 08:42:09 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 08:42:09 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:42:09 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 08:42:09 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:42:09 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 08:42:09 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:42:09 ERROR: { "error": "[XServer] [go_handler Handler] [Error] failed run handler file: fork/exec bin/handlers/go_handler/executable: no such file or directory" }
+2023/07/09 08:42:10 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:42:10 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:42:12 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:42:12 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:42:17 INFO: [XServer] [Build] Build project
+2023/07/09 08:42:17 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 08:42:17 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:42:17 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 08:42:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:42:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 08:42:17 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 08:42:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:42:17 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 08:42:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:42:17 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 08:42:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:42:17 ERROR: { "error": "[XServer] [go_handler Handler] [Error] failed run handler file: fork/exec bin/handlers/go_handler/executable: no such file or directory" }
+2023/07/09 08:42:18 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:42:18 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:42:20 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:42:20 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:42:20 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:42:20 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:43:22 INFO: [XServer] [Build] Build project
+2023/07/09 08:43:22 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:43:22 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:43:25 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:43:25 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:43:25 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:43:25 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:43:26 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:43:26 INFO: [XServer] Start project
+2023/07/09 08:43:26 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 08:43:26 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 08:43:26 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:43:26 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 08:43:26 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 08:43:26 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:43:26 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 08:43:26 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:43:26 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 08:43:26 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:43:49 INFO: [XServer] [Build] Build project
+2023/07/09 08:43:49 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 08:43:49 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:43:49 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 08:43:49 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:43:49 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 08:43:49 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 08:43:49 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:43:49 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 08:43:49 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:43:49 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 08:43:49 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:43:49 ERROR: { "error": "[XServer] [go_handler Handler] [Error] failed run handler file: fork/exec bin/handlers/go_handler/executable: no such file or directory" }
+2023/07/09 08:43:49 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:43:49 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:43:52 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:43:52 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:43:52 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:43:52 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:44:50 INFO: [XServer] [Build] Build project
+2023/07/09 08:44:50 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 08:44:50 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:44:50 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 08:44:50 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:44:50 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 08:44:50 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 08:44:51 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:44:51 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 08:44:51 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:44:51 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 08:44:51 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:44:51 ERROR: { "error": "[XServer] [go_handler Handler] [Error] failed run handler file: fork/exec bin/handlers/go_handler/executable: no such file or directory" }
+2023/07/09 08:44:51 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:44:51 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:44:53 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:44:54 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:44:54 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:44:54 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:46:01 INFO: [XServer] [Build] Build project
+2023/07/09 08:46:01 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:46:02 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:46:02 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:46:05 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:46:05 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:46:05 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:46:05 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:46:05 INFO: [XServer] Start project
+2023/07/09 08:46:05 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 08:46:05 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 08:46:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:46:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 08:46:05 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 08:46:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:46:05 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 08:46:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:46:05 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 08:46:06 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:46:54 INFO: [XServer] [Build] Build project
+2023/07/09 08:46:54 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:46:54 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:46:54 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:46:54 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:46:54 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:46:57 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:46:57 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:46:58 INFO: [XServer] Start project
+2023/07/09 08:46:58 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 08:46:58 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 08:46:58 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:46:58 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 08:46:58 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 08:46:58 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:46:58 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 08:46:58 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:46:58 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 08:46:58 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:49:05 INFO: [XServer] Start project
+2023/07/09 08:49:20 INFO: [XServer] Start project
+2023/07/09 08:56:33 INFO: [XServer] [Build] Build project
+2023/07/09 08:56:33 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:56:33 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:56:33 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:56:36 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:56:36 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:56:36 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:56:36 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:56:36 INFO: [XServer] Start project
+2023/07/09 08:56:36 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 08:56:36 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 08:56:37 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:56:37 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 08:56:37 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 08:56:37 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:56:37 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 08:56:37 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:56:37 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 08:56:37 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:56:47 INFO: [XServer] [Build] Build project
+2023/07/09 08:56:47 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:56:48 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:56:48 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:56:51 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:56:51 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:56:51 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:56:51 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:56:51 INFO: [XServer] Start project
+2023/07/09 08:56:52 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 08:56:52 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 08:56:52 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:56:52 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 08:56:52 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 08:56:52 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:56:52 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 08:56:52 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:56:52 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 08:56:52 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:57:05 INFO: [XServer] [Build] Build project
+2023/07/09 08:57:05 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 08:57:05 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 08:57:05 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 08:57:05 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 08:57:08 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 08:57:08 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 08:57:08 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 08:57:09 INFO: [XServer] Start project
+2023/07/09 08:57:10 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 08:57:10 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 08:57:10 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:57:10 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 08:57:10 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 08:57:10 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:57:10 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 08:57:10 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:57:10 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 08:57:10 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
