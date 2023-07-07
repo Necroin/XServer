@@ -20,6 +20,10 @@ handlers:
     file: handlers/python/handler.py
     run:
       tool: python3
+  
+  lua_handler:
+    path: /lua_handler
+    file: handlers/lua/handler.lua
 
 tasks:
   5_sec_periodic:

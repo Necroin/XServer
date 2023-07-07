@@ -18,11 +18,12 @@ type Run struct {
 }
 
 type ExecutableServerUnit struct {
-	Path   string `yaml:"path"`
-	File   string `yaml:"file"`
-	Period string `yaml:"period"`
-	Build  *Build `yaml:"build"`
-	Run    *Run   `yaml:"run"`
+	Path       string `yaml:"path"`
+	File       string `yaml:"file"`
+	Period     string `yaml:"period"`
+	Build      *Build `yaml:"build"`
+	Run        *Run   `yaml:"run"`
+	LogsEnable bool   `yaml:"log"`
 }
 
 type Config struct {

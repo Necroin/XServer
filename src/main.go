@@ -138,7 +138,7 @@ func getUnitRunCommand(unitTag string, unitsFilesPath string, unitName string, u
 				writer.Write([]byte(message + "\n"))
 			},
 			func(message string) {
-				logger.Info(fmt.Sprintf("[XServer] [%s %s] %s", unitName, unitTag, message))
+				logger.Verbose(fmt.Sprintf("[XServer] [%s %s] %s", unitName, unitTag, message))
 			},
 			args...,
 		)
@@ -162,7 +162,7 @@ func start(config *config.Config) error {
 		server.AddHandler(
 			currentHandler.Path,
 			func(writer http.ResponseWriter, request *http.Request) {
-				logger.Info(fmt.Sprintf("[XServer] [%s Handler] handler called", currentHandlerName))
+				logger.Verbose(fmt.Sprintf("[XServer] [%s Handler] handler called", currentHandlerName))
 				runCommand(writer, request.Body)
 			},
 		)
@@ -183,10 +183,14 @@ func start(config *config.Config) error {
 		cron.AddFunc(
 			currentTask.Period,
 			func() {
-				logger.Info(fmt.Sprintf("[XServer] [%s Task] task started", currentTaskName))
+				if task.LogsEnable {
+					logger.Verbose(fmt.Sprintf("[XServer] [%s Task] task started", currentTaskName))
+				}
 				outBuffer := &bytes.Buffer{}
 				runCommand(outBuffer, &bytes.Buffer{})
-				logger.Info(fmt.Sprintf("[XServer] [%s Task] returned: %s", currentTaskName, outBuffer.String()))
+				if task.LogsEnable {
+					logger.Info(fmt.Sprintf("[XServer] [%s Task] returned: %s", currentTaskName, outBuffer.String()))
+				}
 			},
 		)
 	}

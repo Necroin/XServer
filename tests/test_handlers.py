@@ -12,7 +12,6 @@ def test_python_handler():
     response = requests.post("http://localhost:3301/python_handler", json={"a": 5, "b": 6})
     assert response.text == '[Python Handler] Started\n{"a": 5, "b": 6}\n'
     
-if __name__ == "__main__":
-    test_go_handler()
-    test_cpp_handler()
-    test_python_handler()
+def test_lua_handler():
+    response = requests.post("http://localhost:3301/lua_handler", json={"a": 5, "b": 6})
+    assert response.text == '[Lua Handler] Started\n{"a": 5, "b": 6}\n'
