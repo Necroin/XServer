@@ -29,6 +29,7 @@ type ExecutableServerUnit struct {
 type Config struct {
 	Url      string                          `yaml:"url"`
 	LogsPath string                          `yaml:"log"`
+	LogLevel string                          `yaml:"log_level"`
 	Handlers map[string]ExecutableServerUnit `yaml:"handlers"`
 	Tasks    map[string]ExecutableServerUnit `yaml:"tasks"`
 }

@@ -18,3 +18,13 @@
 2023/07/07 19:31:10 INFO: [XServer] Start project
 2023/07/07 19:32:35 ERROR: { "error": "[XServer] [python_handler Handler] [Error] failed run handler file: exit status 1" }
 2023/07/07 19:32:55 ERROR: { "error": "[XServer] [python_handler Handler] [Error] failed run handler file: exit status 1" }
+2023/07/07 19:41:37 INFO: [XServer] [Build] Build project
+2023/07/07 19:41:37 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/07 19:41:38 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/07 19:41:38 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/07 19:41:40 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/07 19:41:40 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/07 19:41:40 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/07 19:41:41 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/07 19:41:41 INFO: [XServer] Start project
+2023/07/07 19:42:12 ERROR: { "error": "[XServer] [python_handler Handler] [Error] failed run handler file: exit status 1" }

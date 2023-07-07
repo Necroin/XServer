@@ -12,13 +12,19 @@ import (
 const (
 	errorLevel   = 0
 	infoLevel    = 1
-	debufLevel   = 2
+	debugLevel   = 2
 	verboseLevel = 3
 )
 
 var (
-	logLevel = infoLevel
-	mutex    sync.Mutex
+	logLevel    = infoLevel
+	mutex       sync.Mutex
+	logLevelMap = map[string]int{
+		"error":   errorLevel,
+		"info":    infoLevel,
+		"debug":   debugLevel,
+		"verbose": verboseLevel,
+	}
 )
 
 func Configure(config *config.Config) error {
@@ -38,6 +44,14 @@ func Configure(config *config.Config) error {
 		}
 		log.SetOutput(logsFile)
 	}
+
+	configLogLevel, ok := logLevelMap[config.LogLevel]
+	if !ok {
+		configLogLevel = infoLevel
+	}
+
+	logLevel = configLogLevel
+
 	return nil
 }
 
@@ -62,7 +76,7 @@ func Error(message string) {
 }
 
 func Debug(message string) {
-	if logLevel >= debufLevel {
+	if logLevel >= debugLevel {
 		go func() {
 			mutex.Lock()
 			defer mutex.Unlock()

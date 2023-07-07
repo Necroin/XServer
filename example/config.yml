@@ -1,6 +1,7 @@
 ---
 url: localhost:3301
 log: ./logs.txt
+log_level: info
 
 handlers:
   go_handler:
