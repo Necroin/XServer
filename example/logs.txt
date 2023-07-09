@@ -503,3 +503,886 @@
 2023/07/09 08:57:10 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
 2023/07/09 08:57:10 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
 2023/07/09 08:57:10 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 08:59:28 INFO: [XServer] Start project
+2023/07/09 09:07:05 INFO: [XServer] [Build] Build project
+2023/07/09 09:07:05 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:07:06 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:07:06 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:07:09 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:07:09 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:07:09 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:07:09 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:07:09 INFO: [XServer] Start project
+2023/07/09 09:07:09 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:07:09 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:07:09 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:07:09 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:07:09 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:07:09 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:07:09 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:07:09 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:07:09 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:07:09 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:09:13 INFO: [XServer] [Build] Build project
+2023/07/09 09:09:13 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:09:13 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:09:13 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:09:13 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:09:13 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:09:16 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:09:16 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:09:17 INFO: [XServer] Start project
+2023/07/09 09:09:17 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:09:17 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:09:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:09:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:09:17 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:09:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:09:17 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:09:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:09:17 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:09:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:23:10 INFO: [XServer] [Build] Build project
+2023/07/09 09:23:10 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:23:10 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:23:10 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:23:13 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:23:13 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:23:13 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:23:13 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:23:14 INFO: [XServer] Start project
+2023/07/09 09:26:22 INFO: [XServer] [Build] Build project
+2023/07/09 09:26:22 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:26:22 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:26:25 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:26:25 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:26:25 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:26:25 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:26:25 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:26:26 INFO: [XServer] Start project
+2023/07/09 09:26:27 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:26:27 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:26:27 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:26:27 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:26:27 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:26:27 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:26:27 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:26:27 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:26:27 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:26:27 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:30:58 INFO: [XServer] [Build] Build project
+2023/07/09 09:30:58 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:30:58 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:30:58 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:31:01 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:31:01 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:31:01 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:31:02 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:31:02 INFO: [XServer] Start project
+2023/07/09 09:31:03 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:31:03 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:31:03 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:32:12 INFO: [XServer] [Build] Build project
+2023/07/09 09:32:12 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:32:12 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:32:12 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:32:12 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:32:15 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:32:15 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:32:15 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:32:16 INFO: [XServer] Start project
+2023/07/09 09:32:17 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:32:17 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:32:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:32:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:32:17 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:32:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:32:17 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:32:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:32:17 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:32:17 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:35:08 INFO: [XServer] [Build] Build project
+2023/07/09 09:35:08 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:35:08 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:35:09 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:35:09 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:35:11 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:35:11 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:35:11 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:35:12 INFO: [XServer] Start project
+2023/07/09 09:35:12 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:35:12 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:35:12 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:35:12 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:35:12 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:35:12 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:35:12 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:35:12 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:35:12 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:35:35 INFO: [XServer] [Build] Build project
+2023/07/09 09:35:35 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:35:35 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:35:35 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:35:38 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:35:38 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:35:38 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:35:38 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:35:39 INFO: [XServer] Start project
+2023/07/09 09:35:40 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:35:40 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:35:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:35:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:35:40 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:35:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:35:40 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:35:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:35:40 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:35:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:42:20 INFO: [XServer] [Build] Build project
+2023/07/09 09:42:20 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:42:20 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:42:20 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:42:23 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:42:23 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:42:23 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:42:23 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:42:24 INFO: [XServer] Start project
+2023/07/09 09:42:24 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:42:24 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:42:24 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:42:24 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:42:24 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:42:24 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:42:24 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:42:24 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:42:24 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:42:24 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:42:54 INFO: [XServer] [Build] Build project
+2023/07/09 09:42:54 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:42:54 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:42:57 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:42:57 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:42:57 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:42:57 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:42:57 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:42:58 INFO: [XServer] Start project
+2023/07/09 09:42:59 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:42:59 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:42:59 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:42:59 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:42:59 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:42:59 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:42:59 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:42:59 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:42:59 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:42:59 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:50:00 INFO: [XServer] [Build] Build project
+2023/07/09 09:50:00 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:50:00 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:50:00 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:50:03 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:50:03 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:50:03 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:50:03 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:50:04 INFO: [XServer] Start project
+2023/07/09 09:50:05 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:50:05 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:50:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:50:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:50:05 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:50:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:50:05 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:50:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:50:05 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:50:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:50:55 INFO: [XServer] [Build] Build project
+2023/07/09 09:50:55 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:50:56 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:50:56 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:50:58 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:50:58 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:50:58 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:50:58 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:50:59 INFO: [XServer] Start project
+2023/07/09 09:51:00 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:51:00 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:51:00 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:51:00 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:51:00 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:51:00 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:51:00 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:51:00 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:51:00 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:51:00 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:52:52 INFO: [XServer] [Build] Build project
+2023/07/09 09:52:52 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:52:53 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:52:53 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:52:55 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:52:56 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:52:56 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:52:56 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:52:56 INFO: [XServer] Start project
+2023/07/09 09:52:57 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:52:57 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:52:57 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:52:57 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:52:57 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:52:57 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:52:57 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:52:57 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:52:57 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:52:57 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:52:57 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 09:54:17 INFO: [XServer] [Build] Build project
+2023/07/09 09:54:17 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:54:18 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:54:18 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:54:21 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:54:21 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:54:21 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:54:21 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:54:21 INFO: [XServer] Start project
+2023/07/09 09:54:22 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:54:22 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:54:22 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:54:22 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:54:22 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:54:22 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:54:22 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:54:22 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:54:22 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:54:22 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:54:22 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 09:54:37 INFO: [XServer] [Build] Build project
+2023/07/09 09:54:37 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:54:38 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:54:38 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:54:40 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:54:40 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:54:41 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:54:41 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:54:41 INFO: [XServer] Start project
+2023/07/09 09:54:42 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:54:42 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:54:42 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:54:42 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:54:42 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:54:42 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:54:42 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:54:42 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:54:42 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:54:42 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:54:42 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 09:55:07 INFO: [XServer] [Build] Build project
+2023/07/09 09:55:07 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:55:08 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:55:08 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:55:10 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:55:10 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:55:10 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:55:11 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:55:11 INFO: [XServer] Start project
+2023/07/09 09:55:12 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:55:12 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:55:12 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:55:12 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:55:12 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:55:12 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:55:12 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:55:12 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:55:12 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:55:12 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:55:12 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 09:55:46 INFO: [XServer] [Build] Build project
+2023/07/09 09:55:46 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:55:46 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:55:46 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:55:46 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:55:49 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:55:49 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:55:49 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:56:01 INFO: [XServer] [Build] Build project
+2023/07/09 09:56:01 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:56:01 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:56:04 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:56:04 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:56:04 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:56:05 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:56:05 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:56:05 INFO: [XServer] Start project
+2023/07/09 09:56:05 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:56:05 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:56:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:56:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:56:05 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:56:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:56:05 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:56:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:56:05 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:56:05 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:56:05 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 09:56:05 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fileds" section
+2023/07/09 09:57:39 INFO: [XServer] [Build] Build project
+2023/07/09 09:57:39 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:57:39 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:57:40 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:57:42 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:57:42 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:57:42 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:57:42 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:57:43 INFO: [XServer] Start project
+2023/07/09 09:57:43 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:57:43 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:57:43 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:57:43 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:57:43 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:57:43 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:57:43 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:57:43 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:57:43 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:57:43 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:57:43 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 09:57:43 ERROR: [XServer] [Database] [Error] failed verify schema: missed \"fileds\" section
+2023/07/09 09:59:08 INFO: [XServer] [Build] Build project
+2023/07/09 09:59:08 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:59:08 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:59:08 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:59:08 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:59:08 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:59:11 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:59:11 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:59:11 INFO: [XServer] Start project
+2023/07/09 09:59:13 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:59:13 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:59:13 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:59:13 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:59:13 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:59:13 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:59:13 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:59:13 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:59:13 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:59:13 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:59:13 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 09:59:13 ERROR: [XServer] [Database] [Error] failed verify schema: missed \"fileds\" section
+2023/07/09 09:59:13 ERROR: [XServer] [Database] [Error] failed verify schema: missed \"fileds\" section
+2023/07/09 09:59:13 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in \"Test\" table
+2023/07/09 09:59:41 INFO: [XServer] [Build] Build project
+2023/07/09 09:59:41 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 09:59:41 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 09:59:44 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 09:59:44 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 09:59:44 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 09:59:44 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 09:59:44 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 09:59:45 INFO: [XServer] Start project
+2023/07/09 09:59:45 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 09:59:45 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 09:59:45 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:59:45 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 09:59:45 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 09:59:45 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:59:45 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 09:59:45 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:59:45 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 09:59:45 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 09:59:45 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 09:59:45 ERROR: [XServer] [Database] [Error] failed verify schema: missed \"fileds\" section
+2023/07/09 09:59:45 ERROR: [XServer] [Database] [Error] failed verify schema: missed \"fileds\" section
+2023/07/09 09:59:45 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in \"Test\" table
+2023/07/09 10:00:26 INFO: [XServer] [Build] Build project
+2023/07/09 10:00:26 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:00:27 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:00:27 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:00:30 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:00:30 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:00:30 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:00:30 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:00:30 INFO: [XServer] Start project
+2023/07/09 10:00:31 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:00:31 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:00:31 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:00:31 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:00:31 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:00:31 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:00:31 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:00:31 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:00:31 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:00:31 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:00:31 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:00:31 ERROR: [XServer] [Database] [Error] failed verify schema: missed \"fileds\" section
+2023/07/09 10:00:31 ERROR: [XServer] [Database] [Error] failed verify schema: missed \"fileds\" section
+2023/07/09 10:00:31 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in \"Test\" table
+2023/07/09 10:00:31 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:04:50 INFO: [XServer] [Build] Build project
+2023/07/09 10:04:50 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:04:50 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:04:50 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:04:53 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:04:53 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:04:53 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:04:53 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:04:54 INFO: [XServer] Start project
+2023/07/09 10:04:55 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:04:55 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:04:55 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:04:55 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:04:55 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:04:55 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:04:55 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:04:55 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:04:55 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:04:55 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:04:55 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:04:55 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fileds" section
+2023/07/09 10:04:55 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fileds" section
+2023/07/09 10:04:55 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 10:04:55 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:05:35 INFO: [XServer] [Build] Build project
+2023/07/09 10:05:35 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:05:35 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:05:35 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:05:35 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:05:38 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:05:38 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:05:38 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:05:39 INFO: [XServer] Start project
+2023/07/09 10:05:40 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:05:40 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:05:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:05:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:05:40 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:05:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:05:40 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:05:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:05:40 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:05:40 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:05:40 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:05:40 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fileds" section
+2023/07/09 10:05:40 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fileds" section
+2023/07/09 10:05:40 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 10:05:40 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:09:39 INFO: [XServer] [Build] Build project
+2023/07/09 10:09:39 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:09:39 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:09:42 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:09:42 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:09:42 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:09:42 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:09:42 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:09:43 INFO: [XServer] Start project
+2023/07/09 10:09:43 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:09:43 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:09:43 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:09:43 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:09:43 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:09:43 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:09:43 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:09:43 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:09:43 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:09:43 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:09:43 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:09:43 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fileds" section
+2023/07/09 10:09:43 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fileds" section
+2023/07/09 10:09:43 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 10:09:43 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:10:43 INFO: [XServer] [Build] Build project
+2023/07/09 10:10:43 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:10:44 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:10:44 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:10:47 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:10:47 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:10:47 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:10:47 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:10:47 INFO: [XServer] Start project
+2023/07/09 10:10:48 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:10:48 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:10:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:10:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:10:48 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:10:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:10:48 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:10:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:10:48 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:10:48 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:10:48 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:10:48 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fileds" section
+2023/07/09 10:10:48 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fileds" section
+2023/07/09 10:10:48 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 10:10:48 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:10:48 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:11:34 INFO: [XServer] [Build] Build project
+2023/07/09 10:11:34 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:11:34 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:11:37 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:11:37 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:11:37 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:11:37 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:11:37 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:11:38 INFO: [XServer] Start project
+2023/07/09 10:11:39 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:11:39 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:11:39 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:11:39 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:11:39 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:11:39 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:11:39 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:11:39 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:11:39 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:11:39 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:11:39 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:11:39 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fileds" section
+2023/07/09 10:11:39 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fileds" section
+2023/07/09 10:11:39 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 10:11:39 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:11:39 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:11:39 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:12:54 INFO: [XServer] [Build] Build project
+2023/07/09 10:12:54 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:12:54 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:12:54 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:12:57 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:12:57 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:12:57 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:12:57 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:12:58 INFO: [XServer] Start project
+2023/07/09 10:12:59 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:12:59 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:12:59 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:12:59 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:12:59 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:12:59 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:12:59 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:12:59 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:12:59 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:12:59 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:12:59 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:12:59 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fileds" section
+2023/07/09 10:12:59 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fileds" section
+2023/07/09 10:12:59 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 10:12:59 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:12:59 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:12:59 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:12:59 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:16:02 INFO: [XServer] [Build] Build project
+2023/07/09 10:16:02 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:16:02 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:16:02 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:16:05 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:16:05 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:16:05 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:16:06 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:16:06 INFO: [XServer] Start project
+2023/07/09 10:16:07 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:16:07 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:16:07 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:16:07 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:16:07 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:16:07 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:16:07 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:16:07 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:16:07 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:16:07 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:16:07 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:16:07 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:16:07 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:16:07 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 10:16:07 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:16:07 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:16:07 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:16:07 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:16:07 ERROR: [XServer] [Database] [Error] failed verify schema: unknown field "unknown_field" in primary key for "Test" table
+2023/07/09 10:16:21 INFO: [XServer] [Build] Build project
+2023/07/09 10:16:21 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:16:21 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:16:21 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:16:21 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:16:24 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:16:24 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:16:24 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:16:24 INFO: [XServer] Start project
+2023/07/09 10:16:25 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:16:26 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:16:26 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:16:26 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:16:26 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:16:26 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:16:26 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:16:26 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:16:26 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:16:26 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:16:26 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:16:26 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:16:26 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:16:26 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 10:16:26 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:16:26 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:16:26 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:16:26 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:16:26 ERROR: [XServer] [Database] [Error] failed verify schema: unknown field "unknown_field" in primary key for "Test" table
+2023/07/09 10:19:57 INFO: [XServer] [Build] Build project
+2023/07/09 10:19:57 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:19:57 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:19:57 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:20:00 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:20:00 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:20:00 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:20:00 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:20:00 INFO: [XServer] Start project
+2023/07/09 10:20:00 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:20:00 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:20:00 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:20:01 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:20:01 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:20:01 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:20:01 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:20:01 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:20:01 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:20:01 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:20:01 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:20:01 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:20:01 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:20:01 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 10:20:01 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:20:01 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:20:01 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:20:01 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:20:01 ERROR: [XServer] [Database] [Error] failed verify schema: unknown field "unknown_field" in primary key for "Test" table
+2023/07/09 10:26:50 INFO: [XServer] [Build] Build project
+2023/07/09 10:26:50 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:26:50 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:26:50 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:26:50 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:26:50 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:26:53 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:26:53 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:26:54 INFO: [XServer] Start project
+2023/07/09 10:26:55 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:26:55 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:26:55 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:26:55 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:26:55 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:26:55 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:26:55 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:26:55 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:26:55 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:26:55 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:26:55 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:26:55 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:26:55 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:26:55 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 10:26:55 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:26:55 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:26:55 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:26:55 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:26:55 ERROR: [XServer] [Database] [Error] failed verify schema: unknown field "unknown_field" in primary key for "Test" table
+2023/07/09 10:29:24 INFO: [XServer] [Build] Build project
+2023/07/09 10:29:24 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:29:25 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:29:25 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:29:28 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:29:28 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:29:28 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:29:28 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:29:29 INFO: [XServer] Start project
+2023/07/09 10:29:29 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Users(name text NOT NULL, age integer NOT NULL, PRIMARY KEY(name))
+2023/07/09 10:29:29 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:29:29 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:29:29 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:29:29 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:29:29 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:29:29 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:29:29 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:29:29 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:29:29 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:29:29 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:29:30 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:29:30 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:29:30 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:29:30 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 10:29:30 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:29:30 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:29:30 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:29:30 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:29:30 ERROR: [XServer] [Database] [Error] failed verify schema: unknown field "unknown_field" in primary key for "Test" table
+2023/07/09 10:29:30 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Test(field1 text NOT NULL, PRIMARY KEY(field1))
+2023/07/09 10:31:13 INFO: [XServer] [Build] Build project
+2023/07/09 10:31:14 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:31:14 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:31:14 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:31:14 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:31:17 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:31:17 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:31:17 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:31:17 INFO: [XServer] Start project
+2023/07/09 10:31:17 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Users(name text NOT NULL, age integer NOT NULL, PRIMARY KEY(name))
+2023/07/09 10:31:17 DEBUG: [XServer] [Database] create table result: {%!s(*sql.driverConn=&{0xc0000ab520 {13916886396934357923 86043748 0xba7260} {0 0} 0xc00007e8a0 true false false map[] false {13916886396935310311 86996146 0xba7260} [] false}) %!s(*sqlite3.SQLiteResult=&{0 0})}
+2023/07/09 10:31:18 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:31:18 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:31:18 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:31:18 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:31:18 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:31:18 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:31:18 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:31:18 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:31:19 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:31:19 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:31:19 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:31:19 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:31:19 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:31:19 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 10:31:19 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:31:19 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:31:19 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:31:19 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:31:19 ERROR: [XServer] [Database] [Error] failed verify schema: unknown field "unknown_field" in primary key for "Test" table
+2023/07/09 10:31:19 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Test(field1 text NOT NULL, PRIMARY KEY(field1))
+2023/07/09 10:31:19 DEBUG: [XServer] [Database] create table result: {%!s(*sql.driverConn=&{0xc0000ab520 {13916886396934357923 86043748 0xba7260} {0 0} 0xc00007e8a0 true false false map[] false {13916886398263426784 1267628971 0xba7260} [] false}) %!s(*sqlite3.SQLiteResult=&{2 1})}
+2023/07/09 10:33:02 INFO: [XServer] [Build] Build project
+2023/07/09 10:33:02 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:33:02 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:33:05 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:33:05 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:33:05 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:33:05 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:33:05 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:33:06 INFO: [XServer] Start project
+2023/07/09 10:33:06 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Users(name text NOT NULL, age integer NOT NULL, PRIMARY KEY(name))
+2023/07/09 10:33:07 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:33:07 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:33:07 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:33:07 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:33:07 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:33:07 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:33:07 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:33:07 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:33:07 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:33:07 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:33:07 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:33:07 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:33:07 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:33:07 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 10:33:07 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:33:07 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:33:07 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:33:07 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:33:07 ERROR: [XServer] [Database] [Error] failed verify schema: unknown field "unknown_field" in primary key for "Test" table
+2023/07/09 10:33:07 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Test(field1 text NOT NULL, PRIMARY KEY(field1))
+2023/07/09 10:47:04 INFO: [XServer] [Build] Build project
+2023/07/09 10:47:04 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:47:05 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:47:05 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:47:08 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:47:08 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:47:08 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:47:56 INFO: [XServer] [Build] Build project
+2023/07/09 10:47:56 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:47:56 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:47:56 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:47:59 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:47:59 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:47:59 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:47:59 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 10:48:00 INFO: [XServer] Start project
+2023/07/09 10:48:00 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Users(name text NOT NULL, age integer NOT NULL, PRIMARY KEY(name))
+2023/07/09 10:48:00 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 10:48:00 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 10:48:00 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:48:00 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 10:48:00 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 10:48:00 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:48:00 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 10:48:00 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:48:00 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 10:48:00 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 10:48:00 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 10:48:00 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:48:00 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 10:48:00 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 10:48:00 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:48:00 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 10:48:00 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:48:00 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 10:48:00 ERROR: [XServer] [Database] [Error] failed verify schema: unknown field "unknown_field" in primary key for "Test" table
+2023/07/09 10:48:00 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Test(field1 text NOT NULL, PRIMARY KEY(field1))
+2023/07/09 10:48:00 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Test(field1 text NOT NULL, field2 text NOT NULL, PRIMARY KEY(field1))
+2023/07/09 10:48:00 DEBUG: [XServer] [Database] [Select] sql request: SELECT field1, field2 FROM Test
+2023/07/09 10:48:00 ERROR: [XServer] [Database] [Select] [Error] failed database request: no such column: field2
+2023/07/09 10:55:33 INFO: [XServer] [Build] Build project
+2023/07/09 10:55:33 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 10:55:34 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 10:55:34 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 10:55:37 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 10:55:37 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 10:55:37 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 10:55:37 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 12:29:23 INFO: [XServer] Start project
+2023/07/09 12:29:23 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Users(name text NOT NULL, age integer NOT NULL, PRIMARY KEY(name))
+2023/07/09 12:29:47 INFO: [XServer] [Build] Build project
+2023/07/09 12:29:47 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 12:29:47 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 12:29:50 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 12:29:50 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 12:29:50 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 12:29:51 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 12:29:51 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 12:29:51 INFO: [XServer] Start project
+2023/07/09 12:29:51 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Users(name text NOT NULL, age integer NOT NULL, PRIMARY KEY(name))
+2023/07/09 12:29:52 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 12:29:52 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 12:29:52 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 12:29:52 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 12:29:52 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 12:29:52 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 12:29:52 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 12:29:52 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 12:29:52 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 12:29:52 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 12:29:52 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 12:29:52 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 12:29:52 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 12:29:52 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 12:29:52 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 12:29:52 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 12:29:52 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 12:29:52 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 12:29:52 ERROR: [XServer] [Database] [Error] failed verify schema: unknown field "unknown_field" in primary key for "Test" table
+2023/07/09 12:29:52 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Test(field1 text NOT NULL, PRIMARY KEY(field1))
+2023/07/09 12:29:52 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Test(field1 text NOT NULL, field2 text NOT NULL, PRIMARY KEY(field1))
+2023/07/09 12:29:52 DEBUG: [XServer] [Database] [Select] sql request: SELECT field1, field2 FROM Test
+2023/07/09 12:29:52 ERROR: [XServer] [Database] [Select] [Error] failed database request: no such column: field2
+2023/07/09 12:31:51 INFO: [XServer] Start project
+2023/07/09 12:31:51 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Users(name text NOT NULL, age integer NOT NULL, PRIMARY KEY(name))
+2023/07/09 12:47:45 INFO: [XServer] [Build] Build project
+2023/07/09 12:47:45 INFO: [XServer] [Build] [Handlers] build "go_handler"
+2023/07/09 12:47:45 INFO: [XServer] [Build] [Handlers] build "cpp_handler"
+2023/07/09 12:47:45 INFO: [XServer] [Build] [Handlers] "cpp_handler" has specified build options -> build by options
+2023/07/09 12:47:48 INFO: [XServer] [Build] [Handlers] build "python_handler"
+2023/07/09 12:47:48 INFO: [XServer] [Build] [Handlers] build "lua_handler"
+2023/07/09 12:47:48 INFO: [XServer] [Build] [Tasks] build "5_sec_periodic"
+2023/07/09 12:47:48 INFO: [XServer] [Build] [Tasks] build "10_sec_periodic"
+2023/07/09 12:47:49 INFO: [XServer] Start project
+2023/07/09 12:47:49 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Users(name text NOT NULL, age integer NOT NULL, PRIMARY KEY(name))
+2023/07/09 12:47:49 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Me', 20)
+2023/07/09 12:47:49 DEBUG: [XServer] [Database] [Insert] sql request: INSERT INTO Users (name, age) VALUES ('Other', 50)
+2023/07/09 12:47:50 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 12:47:50 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users WHERE name = 'Me'
+2023/07/09 12:47:50 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 100
+2023/07/09 12:47:50 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 12:47:50 DEBUG: [XServer] [Database] [Update] sql request: UPDATE Users SET age = 200 WHERE name = 'Me'
+2023/07/09 12:47:50 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 12:47:50 DEBUG: [XServer] [Database] [Delete] sql request: DELETE FROM Users WHERE name = 'Other'
+2023/07/09 12:47:50 DEBUG: [XServer] [Database] [Select] sql request: SELECT name, age FROM Users
+2023/07/09 12:47:50 ERROR: [XServer] [Database] [Error] failed verify schema: table name is empty
+2023/07/09 12:47:50 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 12:47:50 ERROR: [XServer] [Database] [Error] failed verify schema: missed "fields" section
+2023/07/09 12:47:50 ERROR: [XServer] [Database] [Error] failed verify schema: empty field name in "Test" table
+2023/07/09 12:47:50 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 12:47:50 ERROR: [XServer] [Database] [Error] failed verify schema: unknown type for "field1" field in "Test" table
+2023/07/09 12:47:50 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 12:47:50 ERROR: [XServer] [Database] [Error] failed verify schema: primary key for "Test" table is empty
+2023/07/09 12:47:50 ERROR: [XServer] [Database] [Error] failed verify schema: unknown field "unknown_field" in primary key for "Test" table
+2023/07/09 12:47:50 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Test(field1 text NOT NULL, PRIMARY KEY(field1))
+2023/07/09 12:47:50 DEBUG: [XServer] [Database] CREATE TABLE IF NOT EXISTS Test(field1 text NOT NULL, field2 text NOT NULL, PRIMARY KEY(field1))
+2023/07/09 12:47:50 DEBUG: [XServer] [Database] [Select] sql request: SELECT field1, field2 FROM Test
+2023/07/09 12:47:50 ERROR: [XServer] [Database] [Select] [Error] failed database request: no such column: field2

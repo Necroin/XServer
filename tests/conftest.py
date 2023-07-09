@@ -1,6 +1,4 @@
-from time import sleep
 import pytest
-
 from modules.project import Project
 
 
@@ -11,9 +9,7 @@ class Environment():
 
 @pytest.fixture(scope="session", name="project")
 def project():
-    project_instance = Project(
-        path="example"
-    )
+    project_instance = Project()
     project_instance.wait_start()
     yield project_instance
     project_instance.stop()

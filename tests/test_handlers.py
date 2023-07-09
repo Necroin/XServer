@@ -1,26 +1,21 @@
-import requests
 from conftest import Environment
 
 
 def test_go_handler(environment: Environment):
-    response = requests.post(
-        "http://localhost:3301/go_handler", json={"a": 5, "b": 6})
-    assert response.text == '[Go Handler] Started\n{"a": 5, "b": 6}\n'
+    assert environment.project.server.request(
+        "/go_handler", {"a": 5, "b": 6}) == '[Go Handler] Started\n{"a": 5, "b": 6}\n'
 
 
 def test_cpp_handler(environment: Environment):
-    response = requests.post(
-        "http://localhost:3301/cpp_handler", json={"a": 5, "b": 6})
-    assert response.text == '[C++ Handler] Started\n{"a": 5, "b": 6}\n'
+    assert environment.project.server.request(
+        "/cpp_handler", {"a": 5, "b": 6}) == '[C++ Handler] Started\n{"a": 5, "b": 6}\n'
 
 
 def test_python_handler(environment: Environment):
-    response = requests.post(
-        "http://localhost:3301/python_handler", json={"a": 5, "b": 6})
-    assert response.text == '[Python Handler] Started\n{"a": 5, "b": 6}\n'
+    assert environment.project.server.request(
+        "/python_handler", {"a": 5, "b": 6}) == '[Python Handler] Started\n{"a": 5, "b": 6}\n'
 
 
 def test_lua_handler(environment: Environment):
-    response = requests.post(
-        "http://localhost:3301/lua_handler", json={"a": 5, "b": 6})
-    assert response.text == '[Lua Handler] Started\n{"a": 5, "b": 6}\n'
+    assert environment.project.server.request(
+        "/lua_handler", {"a": 5, "b": 6}) == '[Lua Handler] Started\n{"a": 5, "b": 6}\n'

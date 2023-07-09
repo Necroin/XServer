@@ -7,6 +7,7 @@ import (
 	"io"
 	"os"
 	"strings"
+	"xserver/src/config"
 	"xserver/src/logger"
 
 	_ "github.com/mattn/go-sqlite3"
@@ -33,8 +34,8 @@ type Database struct {
 	db *sql.DB
 }
 
-func Create() (*Database, error) {
-	db, err := sql.Open("sqlite3", "storage.db")
+func Create(config *config.Config) (*Database, error) {
+	db, err := sql.Open("sqlite3", config.Database.Storage)
 	if err != nil {
 		return nil, fmt.Errorf("[XServer] [Database] [Error] failed open database: %s", err)
 	}
@@ -43,7 +44,7 @@ func Create() (*Database, error) {
 		db: db,
 	}
 
-	schemaFile, err := os.Open("schema.json")
+	schemaFile, err := os.Open(config.Database.Schema)
 	if err != nil {
 		return nil, fmt.Errorf("[XServer] [Database] [Error] failed open schema file: %s", err)
 	}
@@ -70,10 +71,11 @@ func (database *Database) SetSchema(data io.Reader) error {
 
 	for _, table := range schema {
 		command := createTableCommand(table)
-		fmt.Println(command)
-		res, err := database.db.Exec(command)
-		fmt.Println(res)
-		fmt.Println(err)
+		logger.Debug(fmt.Sprintf("[XServer] [Database] %s", command))
+		_, err := database.db.Exec(command)
+		if err != nil {
+			return fmt.Errorf("[XServer] [Database] [Error] failed create table : %s", err)
+		}
 	}
 
 	return nil

@@ -1,20 +1,12 @@
 import requests
-import sqlite3
 from conftest import Environment
 
 
-def clear_database():
-    connection = sqlite3.connect("storage.db")
-    connection.execute("DELETE FROM Users")
-    connection.commit()
-
-
 def test_insert(environment: Environment):
-    clear_database()
+    environment.project.database.clear()
 
-    response = requests.post(
-        environment.project.url + "/db/insert",
-        json={
+    response = environment.project.database.insert(
+        {
             "table": "Users",
             "fields": [
                 {
@@ -29,12 +21,11 @@ def test_insert(environment: Environment):
         }
     )
 
-    assert response.json()["result"] == True
-    assert response.json().get("error", None) is None
+    assert response["result"] == True
+    assert response.get("error", None) is None
 
-    response = requests.post(
-        environment.project.url + "/db/insert",
-        json={
+    response = environment.project.database.insert(
+        {
             "table": "Users",
             "fields": [
                 {
@@ -49,14 +40,13 @@ def test_insert(environment: Environment):
         }
     )
 
-    assert response.json()["result"] == True
-    assert response.json().get("error", None) is None
+    assert response["result"] == True
+    assert response.get("error", None) is None
 
 
 def test_select_all(environment: Environment):
-    response = requests.post(
-        environment.project.url + "/db/select",
-        json={
+    response = environment.project.database.select(
+        {
             "table": "Users",
             "fields": [{"name": "name"}, {"name": "age"}]
         }
@@ -75,23 +65,21 @@ def test_select_all(environment: Environment):
         ]
     }
 
-    assert response.json() == expected
+    assert response == expected
 
 
 def test_select_with_filter(environment: Environment):
-    response = requests.post(
-        environment.project.url + "/db/select",
-        json={
-            "table": "Users",
-            "fields": [{"name": "name"}, {"name": "age"}],
-            "filters": [
-                {
-                    "name": "name",
-                    "operator": "=",
-                    "value": "'Me'"
-                }
-            ]
-        }
+    response = environment.project.database.select({
+        "table": "Users",
+        "fields": [{"name": "name"}, {"name": "age"}],
+        "filters": [
+            {
+                "name": "name",
+                "operator": "=",
+                "value": "'Me'"
+            }
+        ]
+    }
     )
 
     expected = {
@@ -103,13 +91,12 @@ def test_select_with_filter(environment: Environment):
         ]
     }
 
-    assert response.json() == expected
+    assert response == expected
 
 
 def test_update_all(environment: Environment):
-    response = requests.post(
-        environment.project.url + "/db/update",
-        json={
+    response = environment.project.database.update(
+        {
             "table": "Users",
             "fields": [
                 {
@@ -120,12 +107,11 @@ def test_update_all(environment: Environment):
         }
     )
 
-    assert response.json()["result"] == True
-    assert response.json().get("error", None) is None
+    assert response["result"] == True
+    assert response.get("error", None) is None
 
-    response = requests.post(
-        environment.project.url + "/db/select",
-        json={
+    response = environment.project.database.select(
+        {
             "table": "Users",
             "fields": [{"name": "name"}, {"name": "age"}]
         }
@@ -144,13 +130,12 @@ def test_update_all(environment: Environment):
         ]
     }
 
-    assert response.json() == expected
+    assert response == expected
 
 
 def test_update_with_filter(environment: Environment):
-    response = requests.post(
-        environment.project.url + "/db/update",
-        json={
+    response = environment.project.database.update(
+        {
             "table": "Users",
             "filters": [
                 {
@@ -168,12 +153,11 @@ def test_update_with_filter(environment: Environment):
         }
     )
 
-    assert response.json()["result"] == True
-    assert response.json().get("error", None) is None
+    assert response["result"] == True
+    assert response.get("error", None) is None
 
-    response = requests.post(
-        environment.project.url + "/db/select",
-        json={
+    response = environment.project.database.select(
+        {
             "table": "Users",
             "fields": [{"name": "name"}, {"name": "age"}]
         }
@@ -192,13 +176,12 @@ def test_update_with_filter(environment: Environment):
         ]
     }
 
-    assert response.json() == expected
+    assert response == expected
 
 
 def test_delete(environment: Environment):
-    response = requests.post(
-        "http://localhost:3301/db/delete",
-        json={
+    response = environment.project.database.delete(
+        {
             "table": "Users",
             "filters": [
                 {
@@ -210,12 +193,11 @@ def test_delete(environment: Environment):
         }
     )
 
-    assert response.json()["result"] == True
-    assert response.json().get("error", None) is None
+    assert response["result"] == True
+    assert response.get("error", None) is None
 
-    response = requests.post(
-        "http://localhost:3301/db/select",
-        json={
+    response = environment.project.database.select(
+        {
             "table": "Users",
             "fields": [{"name": "name"}, {"name": "age"}]
         }
@@ -230,4 +212,4 @@ def test_delete(environment: Environment):
         ]
     }
 
-    assert response.json() == expected
+    assert response == expected

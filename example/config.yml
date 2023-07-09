@@ -4,7 +4,8 @@ url: localhost:3301
 log: ./logs.txt
 log_level: debug
 
-database: true
+database: 
+  enable: true
 
 handlers:
   go_handler:

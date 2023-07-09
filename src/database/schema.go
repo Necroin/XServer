@@ -46,7 +46,7 @@ func verifySchema(tables []Table) error {
 		}
 
 		if len(table.Fields) == 0 {
-			return fmt.Errorf(`missed "fileds" section`)
+			return fmt.Errorf(`missed "fields" section`)
 		}
 
 		fieldsMap := make(map[string]bool)
