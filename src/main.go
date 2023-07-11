@@ -200,6 +200,7 @@ func start(config *config.Config) error {
 	if config.Database.Enable {
 		database, err := database.Create(config)
 		if err != nil {
+			logger.Error(err.Error())
 			return err
 		}
 		defer database.Close()

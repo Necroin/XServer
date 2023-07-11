@@ -32,6 +32,9 @@ class Database:
         return self.request("set_schema", data)
         
     def clear(self):
-        connection = sqlite3.connect(self.storage_path)
-        connection.execute("DELETE FROM Users")
-        connection.commit()
+        try:
+            connection = sqlite3.connect(self.storage_path)
+            connection.execute("DELETE FROM Users")
+            connection.commit()
+        except:
+            pass

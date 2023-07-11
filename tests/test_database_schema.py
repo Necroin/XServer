@@ -148,7 +148,8 @@ def test_schema_migration_new_field(environment: Environment):
                 },
                 {
                     "name": "field2",
-                    "type": "string"
+                    "type": "string",
+                    "nullable": True
                 }
             ],
             "primary_key": ["field1"]
@@ -164,3 +165,30 @@ def test_schema_migration_new_field(environment: Environment):
     
     assert response["result"] == []
     assert response.get("error", None) is None
+
+
+def test_schema_migration_remove_field(environment: Environment):
+    response = environment.project.database.set_schema([
+        {
+            "name": "Test",
+            "fields": [
+                {
+                    "name": "field1",
+                    "type": "string"
+                }
+            ],
+            "primary_key": ["field1"]
+        }
+    ])
+    assert response["result"] == True
+    assert response.get("error", None) is None
+
+    response = environment.project.database.select({
+        "table": "Test",
+        "fields": [{"name": "field1"}, {"name": "field2"}]
+    })
+    
+    assert response["result"] == []
+    assert response.get("error", None) is not None
+    
+    

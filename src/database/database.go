@@ -8,6 +8,7 @@ import (
 	"os"
 	"strings"
 	"xserver/src/config"
+	"xserver/src/database/schema"
 	"xserver/src/logger"
 
 	_ "github.com/mattn/go-sqlite3"
@@ -31,7 +32,8 @@ type Request struct {
 }
 
 type Database struct {
-	db *sql.DB
+	config *config.Database
+	db     *sql.DB
 }
 
 func Create(config *config.Config) (*Database, error) {
@@ -41,13 +43,15 @@ func Create(config *config.Config) (*Database, error) {
 	}
 
 	database := &Database{
-		db: db,
+		config: &config.Database,
+		db:     db,
 	}
 
 	schemaFile, err := os.Open(config.Database.Schema)
 	if err != nil {
 		return nil, fmt.Errorf("[XServer] [Database] [Error] failed open schema file: %s", err)
 	}
+	defer schemaFile.Close()
 
 	if err := database.SetSchema(schemaFile); err != nil {
 		return nil, err
@@ -61,21 +65,20 @@ func (database *Database) Close() {
 }
 
 func (database *Database) SetSchema(data io.Reader) error {
-	schema, err := parseSchema(data)
+	shcemaData, err := io.ReadAll(data)
 	if err != nil {
-		return fmt.Errorf("[XServer] [Database] [Error] failed parse schema file: %s", err)
+		return fmt.Errorf("[XServer] [Database] [Error] failed read schema data: %s", err)
 	}
-	if err := verifySchema(schema); err != nil {
+	tables, err := schema.Parse(shcemaData)
+	if err != nil {
+		return fmt.Errorf("[XServer] [Database] [Error] failed parse schema: %s", err)
+	}
+	if err := schema.Verify(tables); err != nil {
 		return fmt.Errorf("[XServer] [Database] [Error] failed verify schema: %s", err)
 	}
 
-	for _, table := range schema {
-		command := createTableCommand(table)
-		logger.Debug(fmt.Sprintf("[XServer] [Database] %s", command))
-		_, err := database.db.Exec(command)
-		if err != nil {
-			return fmt.Errorf("[XServer] [Database] [Error] failed create table : %s", err)
-		}
+	if err := schema.Migration(database.db, shcemaData); err != nil {
+		return err
 	}
 
 	return nil
