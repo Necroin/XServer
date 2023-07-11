@@ -7,8 +7,10 @@ import (
 	"net/http"
 	"os"
 	"path"
+	"strings"
 	"xserver/src/builders"
 	"xserver/src/config"
+	"xserver/src/database"
 	"xserver/src/logger"
 	"xserver/src/runners"
 	"xserver/src/server"
@@ -133,7 +135,7 @@ func getUnitRunCommand(unitTag string, unitsFilesPath string, unitName string, u
 			writer,
 			request,
 			func(message string, err error) {
-				message = fmt.Sprintf(`{ "error": "[XServer] [%s %s] [Error] %s: %s" }`, unitName, unitTag, message, err)
+				message = fmt.Sprintf(`{ "error": "[XServer] [%s %s] [Error] %s: %s" }`, unitName, unitTag, message, strings.ReplaceAll(err.Error(), `"`, `\"`))
 				logger.Error(message)
 				writer.Write([]byte(message + "\n"))
 			},
@@ -194,11 +196,80 @@ func start(config *config.Config) error {
 			},
 		)
 	}
+
+	if config.Database.Enable {
+		database, err := database.Create(config)
+		if err != nil {
+			logger.Error(err.Error())
+			return err
+		}
+		defer database.Close()
+
+		server.AddHandler(
+			"/db/insert",
+			func(writer http.ResponseWriter, request *http.Request) {
+				if err := database.Insert(request.Body, writer); err != nil {
+					logger.Error(err.Error())
+					writer.Write([]byte(fmt.Sprintf(`{"result": false, "error": "%s"}`, strings.ReplaceAll(err.Error(), `"`, `\"`)) + "\n"))
+				}
+			},
+		)
+
+		server.AddHandler(
+			"/db/select",
+			func(writer http.ResponseWriter, request *http.Request) {
+				if err := database.Select(request.Body, writer); err != nil {
+					logger.Error(err.Error())
+					writer.Write([]byte(fmt.Sprintf(`{"result": [], "error": "%s"}`, strings.ReplaceAll(err.Error(), `"`, `\"`)) + "\n"))
+				}
+			},
+		)
+
+		server.AddHandler(
+			"/db/update",
+			func(writer http.ResponseWriter, request *http.Request) {
+				if err := database.Update(request.Body, writer); err != nil {
+					logger.Error(err.Error())
+					writer.Write([]byte(fmt.Sprintf(`{"result": false, "error": "%s"}`, strings.ReplaceAll(err.Error(), `"`, `\"`)) + "\n"))
+				}
+			},
+		)
+
+		server.AddHandler(
+			"/db/delete",
+			func(writer http.ResponseWriter, request *http.Request) {
+				if err := database.Delete(request.Body, writer); err != nil {
+					logger.Error(err.Error())
+					writer.Write([]byte(fmt.Sprintf(`{"result": false, "error": "%s"}`, strings.ReplaceAll(err.Error(), `"`, `\"`)) + "\n"))
+				}
+			},
+		)
+
+		server.AddHandler(
+			"/db/set_schema",
+			func(writer http.ResponseWriter, request *http.Request) {
+				if err := database.SetSchema(request.Body); err != nil {
+					logger.Error(err.Error())
+					writer.Write([]byte(fmt.Sprintf(`{"result": false, "error": "%s"}`, strings.ReplaceAll(err.Error(), `"`, `\"`)) + "\n"))
+					return
+				}
+				writer.Write([]byte(`{"result": true}`))
+			},
+		)
+	}
+
+	server.AddHandler(
+		"/status",
+		func(writer http.ResponseWriter, request *http.Request) {
+			writer.Write([]byte("OK"))
+		},
+	)
+
 	cron.Start()
+	defer cron.Stop()
 
 	err := server.Start(config)
 	if err != nil {
-		cron.Stop()
 		return err
 	}
 	return nil
@@ -235,7 +306,7 @@ func main() {
 	}
 
 	if err := command(config); err != nil {
-		logger.Error(err.Error())
+		fmt.Println(err)
 		return
 	}
 

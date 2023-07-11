@@ -7,6 +7,11 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
+const (
+	defaultStoragePath = "storage.db"
+	defaultSchemaPath  = "schema.json"
+)
+
 type Build struct {
 	Tool  string   `yaml:"tool"`
 	Flags []string `yaml:"flags"`
@@ -26,12 +31,29 @@ type ExecutableServerUnit struct {
 	LogsEnable bool   `yaml:"log"`
 }
 
+type Database struct {
+	Enable  bool   `yaml:"enable"`
+	Storage string `yaml:"storage" default:"storage.db"`
+	Schema  string `yaml:"schema" default:"schema.json"`
+}
+
 type Config struct {
 	Url      string                          `yaml:"url"`
-	LogsPath string                          `yaml:"log"`
+	LogPath  string                          `yaml:"log"`
 	LogLevel string                          `yaml:"log_level"`
+	Database Database                        `yaml:"database"`
 	Handlers map[string]ExecutableServerUnit `yaml:"handlers"`
 	Tasks    map[string]ExecutableServerUnit `yaml:"tasks"`
+}
+
+func (config *Config) setDefaults() {
+	if config.Database.Storage == "" {
+		config.Database.Storage = defaultStoragePath
+	}
+
+	if config.Database.Schema == "" {
+		config.Database.Schema = defaultSchemaPath
+	}
 }
 
 func Load(path string) (*Config, error) {
@@ -48,6 +70,9 @@ func Load(path string) (*Config, error) {
 		return nil, fmt.Errorf("[Config] [Error] failed map config file: %s\n", err)
 	}
 
-	fmt.Println("[Config] config loaded successfully: ", config)
+	config.setDefaults()
+
+	fmt.Println("[Config] config loaded successfully: ", *config)
+
 	return config, nil
 }

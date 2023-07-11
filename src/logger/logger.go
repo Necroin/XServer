@@ -29,15 +29,15 @@ var (
 
 func Configure(config *config.Config) error {
 	log.SetOutput(os.Stdout)
-	if config.LogsPath != "" {
-		if err := os.MkdirAll(path.Dir(config.LogsPath), os.ModePerm); err != nil {
+	if config.LogPath != "" {
+		if err := os.MkdirAll(path.Dir(config.LogPath), os.ModePerm); err != nil {
 			return fmt.Errorf("[XServer] [Logger] [Error] failed create logs directory: %s", err)
 		}
 
 		var logsFile *os.File
-		logsFile, err := os.OpenFile(config.LogsPath, os.O_RDWR|os.O_CREATE|os.O_APPEND, os.ModePerm)
+		logsFile, err := os.OpenFile(config.LogPath, os.O_RDWR|os.O_CREATE|os.O_APPEND, os.ModePerm)
 		if err != nil {
-			logsFile, err = os.Create(config.LogsPath)
+			logsFile, err = os.Create(config.LogPath)
 			if err != nil {
 				return fmt.Errorf("[XServer] [Logger] [Error] failed create logs file: %s", err)
 			}
