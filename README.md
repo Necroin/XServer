@@ -27,7 +27,12 @@ The configuration file uses the `yaml` format.
 
 Server uses the following configuration file structure:
 - `url` - server url
-- `log` - path to log file
+- `log` - path to log file (use `stdout` by default)
+- `log_level` - `error`/`info`/`debug`/`verbose` (`info` by default)
+- `database` - database options (`sqlite`)
+  - `enable` - use database flag (`true`/`false`)
+  - `storage` - path to storege `.db` file (`storage.db` by default)
+  - `schema` - path to schema `.json` file (`schema.json` by default)
 - `handlers` - section for server handlers
   - `handler name` - defines the handler and makes it unique
     - `path` - server handler path
@@ -59,4 +64,43 @@ All files specified in the part `handlers` or `tasks` will be placed in the `bin
 ### 3. Start server
 ```shell
 $ xserver start
+```
+___
+## Database
+Server supports the use of sqlite database.
+
+- ### Schema format
+```json
+[
+  {
+    "name": "table_name",
+    "fields": [
+      {
+        "name": "field_name",
+        "type": "field_type",
+        "nullable": true/false
+      },
+      ...
+    ],
+  "primary_key": ["field_name1", "field_name2", ...]
+  },
+  ...
+]
+```
+___
+- ### Insert endpoint
+`path` - `/db/insert`
+
+`request format:`
+```json
+{
+  "table": "Users",
+  "fields": [
+    {
+      "name": "field_name",
+      "value": "'field_value'"
+    },
+    ...
+  ]
+}
 ```
