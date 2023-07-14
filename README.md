@@ -67,10 +67,12 @@ $ xserver start
 ```
 ___
 ## Database
-Server supports the use of sqlite database.
+Server use sqlite database.
 
-- ### Schema format
-```json
+The scheme and operations uses the json format.
+___
+### Schema format
+```
 [
   {
     "name": "table_name",
@@ -88,19 +90,69 @@ Server supports the use of sqlite database.
 ]
 ```
 ___
-- ### Insert endpoint
-`path` - `/db/insert`
-
-`request format:`
-```json
+### Operations
+Database operations are implemented via server endpoints.
+- `insert` - `/db/insert`
+- `select` - `/db/select`
+- `update` - `/db/update`
+- `delete` - `/db/delete`
+___
+### Operations request format
+- `insert`
+```
 {
   "table": "Users",
   "fields": [
     {
       "name": "field_name",
-      "value": "'field_value'"
+      "value": "field_value"
     },
     ...
+  ]
+}
+```
+
+- `select`
+```
+{
+  "table": "Users",
+  "fields": [{"name": "field_name"}, ...]
+}
+```
+
+- `update`
+```
+{
+  "table": "Users",
+  "filters": [
+      {
+          "name": "field_name",
+          "operator": "any_sql_compare_operator",
+          "value": "field_value"
+      },
+      ...
+  ],
+  "fields": [
+      {
+          "name": "update_field_name",
+          "value": "update_field_value"
+      },
+      ...
+  ]
+}
+```
+
+- `delete`
+```
+{
+  "table": "Users",
+  "filters": [
+      {
+          "name": "field_name",
+          "operator": "any_sql_compare_operator",
+          "value": "field_value"
+      },
+      ...
   ]
 }
 ```
